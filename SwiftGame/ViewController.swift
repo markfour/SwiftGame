@@ -17,6 +17,24 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         
+//        view.frame = CGRectMake(0, 0, CGRectGetWidth(UIScreen.mainScreen().bounds), CGRectGetWidth(UIScreen.mainScreen().bounds))
+        
+        print("window \(UIScreen.mainScreen().bounds.size)")
+        print("viewDidLoad \(scrollView.frame)")
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print("will apper \(scrollView.frame)")
+
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        print("will apper \(scrollView.frame)")
+        
+        scrollView.fixImage(imageView: imageView)
     }
 
     override func didReceiveMemoryWarning() {

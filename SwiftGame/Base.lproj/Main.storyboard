@@ -16,16 +16,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Byo-Yx-HB6">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Byo-Yx-HB6">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iland.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="OGk-pv-Ebq">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iland.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="OGk-pv-Ebq">
                                         <rect key="frame" x="0.0" y="0.0" width="500" height="386"/>
                                         <animations/>
                                     </imageView>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="OGk-pv-Ebq" firstAttribute="leading" secondItem="Byo-Yx-HB6" secondAttribute="leading" id="Yh6-1Z-Icf"/>
+                                    <constraint firstAttribute="bottom" secondItem="OGk-pv-Ebq" secondAttribute="bottom" id="ad8-1N-Hil"/>
+                                    <constraint firstItem="OGk-pv-Ebq" firstAttribute="top" secondItem="Byo-Yx-HB6" secondAttribute="top" id="eUH-Od-D1t"/>
+                                    <constraint firstAttribute="trailing" secondItem="OGk-pv-Ebq" secondAttribute="trailing" id="jLT-H9-KEg"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <animations/>

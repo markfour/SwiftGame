@@ -16,6 +16,7 @@
 		C49F546D1BD7BE9E00F42D75 /* SwiftGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F546C1BD7BE9E00F42D75 /* SwiftGameUITests.swift */; };
 		C4AF82801BE4DAFB00EDA623 /* iland.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4AF827F1BE4DAFB00EDA623 /* iland.jpg */; settings = {ASSET_TAGS = (); }; };
 		C4FAE1301BE5E4E5001D8053 /* UIScrollView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FAE12F1BE5E4E5001D8053 /* UIScrollView+Image.swift */; settings = {ASSET_TAGS = (); }; };
+		C4FAE1321BE5FCB2001D8053 /* UIImage+ResizeAndCrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FAE1311BE5FCB2001D8053 /* UIImage+ResizeAndCrop.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		C49F546E1BD7BE9E00F42D75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4AF827F1BE4DAFB00EDA623 /* iland.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iland.jpg; sourceTree = "<group>"; };
 		C4FAE12F1BE5E4E5001D8053 /* UIScrollView+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Image.swift"; sourceTree = "<group>"; };
+		C4FAE1311BE5FCB2001D8053 /* UIImage+ResizeAndCrop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+ResizeAndCrop.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				C49F54551BD7BE9E00F42D75 /* LaunchScreen.storyboard */,
 				C49F54581BD7BE9E00F42D75 /* Info.plist */,
 				C4FAE12F1BE5E4E5001D8053 /* UIScrollView+Image.swift */,
+				C4FAE1311BE5FCB2001D8053 /* UIImage+ResizeAndCrop.swift */,
 			);
 			path = SwiftGame;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				C49F544F1BD7BE9E00F42D75 /* ViewController.swift in Sources */,
 				C4FAE1301BE5E4E5001D8053 /* UIScrollView+Image.swift in Sources */,
 				C49F544D1BD7BE9E00F42D75 /* AppDelegate.swift in Sources */,
+				C4FAE1321BE5FCB2001D8053 /* UIImage+ResizeAndCrop.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
