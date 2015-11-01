@@ -15,6 +15,7 @@
 		C49F54621BD7BE9E00F42D75 /* SwiftGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F54611BD7BE9E00F42D75 /* SwiftGameTests.swift */; };
 		C49F546D1BD7BE9E00F42D75 /* SwiftGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F546C1BD7BE9E00F42D75 /* SwiftGameUITests.swift */; };
 		C4AF82801BE4DAFB00EDA623 /* iland.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4AF827F1BE4DAFB00EDA623 /* iland.jpg */; settings = {ASSET_TAGS = (); }; };
+		C4FAE1301BE5E4E5001D8053 /* UIScrollView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FAE12F1BE5E4E5001D8053 /* UIScrollView+Image.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		C49F546C1BD7BE9E00F42D75 /* SwiftGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGameUITests.swift; sourceTree = "<group>"; };
 		C49F546E1BD7BE9E00F42D75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4AF827F1BE4DAFB00EDA623 /* iland.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iland.jpg; sourceTree = "<group>"; };
+		C4FAE12F1BE5E4E5001D8053 /* UIScrollView+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Image.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				C49F54531BD7BE9E00F42D75 /* Assets.xcassets */,
 				C49F54551BD7BE9E00F42D75 /* LaunchScreen.storyboard */,
 				C49F54581BD7BE9E00F42D75 /* Info.plist */,
+				C4FAE12F1BE5E4E5001D8053 /* UIScrollView+Image.swift */,
 			);
 			path = SwiftGame;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C49F544F1BD7BE9E00F42D75 /* ViewController.swift in Sources */,
+				C4FAE1301BE5E4E5001D8053 /* UIScrollView+Image.swift in Sources */,
 				C49F544D1BD7BE9E00F42D75 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
