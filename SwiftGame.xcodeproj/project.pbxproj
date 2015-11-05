@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C46124221BEA28F600EE0F0E /* TestEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46124211BEA28F600EE0F0E /* TestEmpty.swift */; settings = {ASSET_TAGS = (); }; };
 		C49F544D1BD7BE9E00F42D75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F544C1BD7BE9E00F42D75 /* AppDelegate.swift */; };
 		C49F544F1BD7BE9E00F42D75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F544E1BD7BE9E00F42D75 /* ViewController.swift */; };
 		C49F54521BD7BE9E00F42D75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C49F54501BD7BE9E00F42D75 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C46124211BEA28F600EE0F0E /* TestEmpty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestEmpty.swift; sourceTree = "<group>"; };
 		C49F54491BD7BE9E00F42D75 /* SwiftGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C49F544C1BD7BE9E00F42D75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C49F544E1BD7BE9E00F42D75 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,15 +105,15 @@
 		C49F544B1BD7BE9E00F42D75 /* SwiftGame */ = {
 			isa = PBXGroup;
 			children = (
-				C4AF827F1BE4DAFB00EDA623 /* iland.jpg */,
 				C49F544C1BD7BE9E00F42D75 /* AppDelegate.swift */,
-				C49F544E1BD7BE9E00F42D75 /* ViewController.swift */,
-				C49F54501BD7BE9E00F42D75 /* Main.storyboard */,
 				C49F54531BD7BE9E00F42D75 /* Assets.xcassets */,
-				C49F54551BD7BE9E00F42D75 /* LaunchScreen.storyboard */,
+				C4AF827F1BE4DAFB00EDA623 /* iland.jpg */,
 				C49F54581BD7BE9E00F42D75 /* Info.plist */,
-				C4FAE12F1BE5E4E5001D8053 /* UIScrollView+Image.swift */,
+				C49F54551BD7BE9E00F42D75 /* LaunchScreen.storyboard */,
+				C49F54501BD7BE9E00F42D75 /* Main.storyboard */,
 				C4FAE1311BE5FCB2001D8053 /* UIImage+ResizeAndCrop.swift */,
+				C4FAE12F1BE5E4E5001D8053 /* UIScrollView+Image.swift */,
+				C49F544E1BD7BE9E00F42D75 /* ViewController.swift */,
 			);
 			path = SwiftGame;
 			sourceTree = "<group>";
@@ -121,6 +123,7 @@
 			children = (
 				C49F54611BD7BE9E00F42D75 /* SwiftGameTests.swift */,
 				C49F54631BD7BE9E00F42D75 /* Info.plist */,
+				C46124211BEA28F600EE0F0E /* TestEmpty.swift */,
 			);
 			path = SwiftGameTests;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C49F54621BD7BE9E00F42D75 /* SwiftGameTests.swift in Sources */,
+				C46124221BEA28F600EE0F0E /* TestEmpty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
