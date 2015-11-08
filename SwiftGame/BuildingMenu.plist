@@ -5,18 +5,34 @@
 	<dict>
 		<key>name</key>
 		<string>伐採所</string>
+		<key>count</key>
+		<integer>1</integer>
+		<key>cost</key>
+		<integer>3</integer>
 	</dict>
 	<dict>
 		<key>name</key>
 		<string>小屋</string>
+		<key>count</key>
+		<integer>0</integer>
+		<key>cost</key>
+		<integer>3</integer>
 	</dict>
 	<dict>
 		<key>name</key>
 		<string>狩猟小屋</string>
+		<key>count</key>
+		<integer>0</integer>
+		<key>cost</key>
+		<integer>3</integer>
 	</dict>
 	<dict>
 		<key>name</key>
 		<string>釣り小屋</string>
+		<key>count</key>
+		<integer>0</integer>
+		<key>cost</key>
+		<integer>3</integer>
 	</dict>
 </array>
 </plist>
