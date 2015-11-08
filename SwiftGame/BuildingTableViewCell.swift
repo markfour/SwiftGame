@@ -18,7 +18,8 @@ class BuildingTableViewCell: UITableViewCell {
     
     backgroundColor = UIColor.redColor()
     
-    titleLabel.frame = CGRectMake(0, 0, 120, 44)
+    titleLabel.frame = CGRectMake(8, 0, 100, 60)
+    titleLabel.textColor = UIColor.hexColor("EFEFEF")
     addSubview(titleLabel)
   }
 

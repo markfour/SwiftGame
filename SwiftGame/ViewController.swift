@@ -51,9 +51,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var cell = BuildingTableViewCell.init()
     
     cell = configCell(cell, indexPath: indexPath)
-
+    
     return cell
   }
+  
+  func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    return 60
+  }
+  
+  // MARK: -
   
   func configCell(cell: BuildingTableViewCell, indexPath: NSIndexPath) -> BuildingTableViewCell {
     let dict = buildingMenu[indexPath.row]
@@ -62,24 +68,31 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // TODO: Get to Plist
     switch indexPath.row {
     case 0:
-      cell.backgroundColor = 
+      cell.backgroundColor = UIColor.hexColor("41A85F")
+      break
     case 1:
+      cell.backgroundColor = UIColor.hexColor("F37934")
+      break
     case 3:
+      cell.backgroundColor = UIColor.hexColor("D14841")
+      break
     case 4:
+      cell.backgroundColor = UIColor.hexColor("2969B0")
+      break
+    default:
+      break
     }
-    
-    
     
     return cell
   }
   
-//  override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//    let cell = tableView.dequeueReusableCellWithIdentifier( "LabelCell", forIndexPath: indexPath)
-//    
-//   ... // Configure the cell
-//    cell.textLabel?.text = "Section \(indexPath.section) Row \(indexPath.row)"
-//    
-//    return cell
-//  }
+  //  override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+  //    let cell = tableView.dequeueReusableCellWithIdentifier( "LabelCell", forIndexPath: indexPath)
+  //
+  //   ... // Configure the cell
+  //    cell.textLabel?.text = "Section \(indexPath.section) Row \(indexPath.row)"
+  //
+  //    return cell
+  //  }
 }
 
