@@ -58,6 +58,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   func configCell(cell: BuildingTableViewCell, indexPath: NSIndexPath) -> BuildingTableViewCell {
     let dict = buildingMenu[indexPath.row]
     cell.titleLabel.text = dict["name"] as? String
+    
+    // TODO: Get to Plist
+    switch indexPath.row {
+    case 0:
+      cell.backgroundColor = 
+    case 1:
+    case 3:
+    case 4:
+    }
+    
+    
+    
     return cell
   }
   
