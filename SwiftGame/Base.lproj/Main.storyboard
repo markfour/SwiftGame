@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,7 +17,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Byo-Yx-HB6">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vhM-JD-JRt">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="E5C-OK-ZK3"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="uUv-5Q-mmC"/>
+                                </connections>
+                            </tableView>
+                            <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Byo-Yx-HB6">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iland.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="OGk-pv-Ebq">
@@ -25,7 +35,6 @@
                                     </imageView>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="OGk-pv-Ebq" firstAttribute="leading" secondItem="Byo-Yx-HB6" secondAttribute="leading" id="Yh6-1Z-Icf"/>
                                     <constraint firstAttribute="bottom" secondItem="OGk-pv-Ebq" secondAttribute="bottom" id="ad8-1N-Hil"/>
@@ -37,15 +46,42 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="vhM-JD-JRt" secondAttribute="trailing" id="0vV-lf-es8"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Byo-Yx-HB6" secondAttribute="bottom" id="7cC-S8-EXt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vhM-JD-JRt" secondAttribute="bottom" id="B0i-Yi-GOd"/>
                             <constraint firstItem="Byo-Yx-HB6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="D0V-lS-9uk"/>
                             <constraint firstAttribute="trailing" secondItem="Byo-Yx-HB6" secondAttribute="trailing" id="HfJ-TA-T4W"/>
                             <constraint firstItem="Byo-Yx-HB6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Mmh-QZ-BEY"/>
+                            <constraint firstItem="vhM-JD-JRt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="evW-oS-bLS"/>
+                            <constraint firstItem="vhM-JD-JRt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hEt-4t-aNP"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="vhM-JD-JRt"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="0vV-lf-es8"/>
+                                <exclude reference="evW-oS-bLS"/>
+                                <exclude reference="hEt-4t-aNP"/>
+                                <exclude reference="B0i-Yi-GOd"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="vhM-JD-JRt"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="0vV-lf-es8"/>
+                                <include reference="evW-oS-bLS"/>
+                                <include reference="hEt-4t-aNP"/>
+                                <include reference="B0i-Yi-GOd"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="OGk-pv-Ebq" id="U1E-RO-gch"/>
                         <outlet property="scrollView" destination="Byo-Yx-HB6" id="4sP-Hh-ee1"/>
+                        <outlet property="tableView" destination="vhM-JD-JRt" id="vzb-06-NNf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
