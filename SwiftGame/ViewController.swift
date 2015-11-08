@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-  @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak var buildingsTable: UITableView!
   @IBOutlet weak var scrollView: UIScrollView!
   @IBOutlet weak var imageView: UIImageView!
   
@@ -19,6 +19,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     super.viewDidLoad()
     
     mainMenu = DataManager.getBuilding()
+    buildingsTable.registerClass(BuildingTableViewCell.classForCoder(), forCellReuseIdentifier: "Cell")
   }
   
   override func viewWillAppear(animated: Bool) {
@@ -54,6 +55,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     return cell
   }
+  
+//  func configCell
   
 //  override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 //    let cell = tableView.dequeueReusableCellWithIdentifier( "LabelCell", forIndexPath: indexPath)

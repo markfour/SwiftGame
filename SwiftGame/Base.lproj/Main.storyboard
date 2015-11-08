@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -60,10 +61,10 @@
                                 <exclude reference="vhM-JD-JRt"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="B0i-Yi-GOd"/>
                                 <exclude reference="0vV-lf-es8"/>
                                 <exclude reference="evW-oS-bLS"/>
                                 <exclude reference="hEt-4t-aNP"/>
-                                <exclude reference="B0i-Yi-GOd"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -71,17 +72,17 @@
                                 <include reference="vhM-JD-JRt"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="B0i-Yi-GOd"/>
                                 <include reference="0vV-lf-es8"/>
                                 <include reference="evW-oS-bLS"/>
                                 <include reference="hEt-4t-aNP"/>
-                                <include reference="B0i-Yi-GOd"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="buildingsTable" destination="vhM-JD-JRt" id="Uzi-ko-Qvu"/>
                         <outlet property="imageView" destination="OGk-pv-Ebq" id="U1E-RO-gch"/>
                         <outlet property="scrollView" destination="Byo-Yx-HB6" id="4sP-Hh-ee1"/>
-                        <outlet property="tableView" destination="vhM-JD-JRt" id="vzb-06-NNf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
