@@ -2,8 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -47,13 +45,13 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="vhM-JD-JRt" secondAttribute="trailing" id="0vV-lf-es8"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Byo-Yx-HB6" secondAttribute="bottom" id="7cC-S8-EXt"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vhM-JD-JRt" secondAttribute="bottom" id="B0i-Yi-GOd"/>
                             <constraint firstItem="Byo-Yx-HB6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="D0V-lS-9uk"/>
                             <constraint firstAttribute="trailing" secondItem="Byo-Yx-HB6" secondAttribute="trailing" id="HfJ-TA-T4W"/>
                             <constraint firstItem="Byo-Yx-HB6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Mmh-QZ-BEY"/>
-                            <constraint firstItem="vhM-JD-JRt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="evW-oS-bLS"/>
+                            <constraint firstItem="vhM-JD-JRt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aJ7-Ba-aEC"/>
+                            <constraint firstAttribute="trailing" secondItem="vhM-JD-JRt" secondAttribute="trailing" id="eoT-Nl-eiB"/>
                             <constraint firstItem="vhM-JD-JRt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hEt-4t-aNP"/>
                         </constraints>
                         <variation key="default">
@@ -61,10 +59,10 @@
                                 <exclude reference="vhM-JD-JRt"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="B0i-Yi-GOd"/>
-                                <exclude reference="0vV-lf-es8"/>
-                                <exclude reference="evW-oS-bLS"/>
+                                <exclude reference="aJ7-Ba-aEC"/>
+                                <exclude reference="eoT-Nl-eiB"/>
                                 <exclude reference="hEt-4t-aNP"/>
+                                <exclude reference="B0i-Yi-GOd"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -72,10 +70,10 @@
                                 <include reference="vhM-JD-JRt"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="B0i-Yi-GOd"/>
-                                <include reference="0vV-lf-es8"/>
-                                <include reference="evW-oS-bLS"/>
+                                <include reference="aJ7-Ba-aEC"/>
+                                <include reference="eoT-Nl-eiB"/>
                                 <include reference="hEt-4t-aNP"/>
+                                <include reference="B0i-Yi-GOd"/>
                             </mask>
                         </variation>
                     </view>
