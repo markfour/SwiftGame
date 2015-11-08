@@ -16,7 +16,10 @@ class BuildingTableViewCell: UITableViewCell {
   override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
     
-    self.backgroundColor = UIColor.redColor()
+    backgroundColor = UIColor.redColor()
+    
+    titleLabel.frame = CGRectMake(0, 0, 120, 44)
+    addSubview(titleLabel)
   }
 
   required init?(coder aDecoder: NSCoder) {

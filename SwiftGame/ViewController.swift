@@ -13,12 +13,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   @IBOutlet weak var scrollView: UIScrollView!
   @IBOutlet weak var imageView: UIImageView!
   
-  var mainMenu = [Dictionary<String, AnyObject>]()
+  var buildingMenu = [Dictionary<String, AnyObject>]()
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    mainMenu = DataManager.getBuilding()
+    buildingMenu = DataManager.getBuilding()
     buildingsTable.registerClass(BuildingTableViewCell.classForCoder(), forCellReuseIdentifier: "Cell")
   }
   
@@ -44,19 +44,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   }
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return mainMenu.count
+    return buildingMenu.count
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = UITableViewCell.init()
+    var cell = BuildingTableViewCell.init()
     
-    let menu = mainMenu[indexPath.row]
-    cell.textLabel?.text = menu["name"] as? String
-    
+    cell = configCell(cell, indexPath: indexPath)
+
     return cell
   }
   
-//  func configCell
+  func configCell(cell: BuildingTableViewCell, indexPath: NSIndexPath) -> BuildingTableViewCell {
+    let dict = buildingMenu[indexPath.row]
+    cell.titleLabel.text = dict["name"] as? String
+    return cell
+  }
   
 //  override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 //    let cell = tableView.dequeueReusableCellWithIdentifier( "LabelCell", forIndexPath: indexPath)
