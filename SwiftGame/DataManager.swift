@@ -16,7 +16,6 @@ struct DataManager {
     if ud.boolForKey("init") {
       return true
     }
-    
     return false
   }
   
@@ -24,6 +23,8 @@ struct DataManager {
     let path = NSBundle.mainBundle().pathForResource("BuildingMenu.plist", ofType:nil )
     let building = NSArray(contentsOfFile: path!)! as Array
     ud.setObject(building, forKey: "building")
+    
+    ud.setBool(true, forKey: "init")
   }
   
   static func getBuilding() -> Array<Dictionary<String, AnyObject>> {

@@ -18,6 +18,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    mainMenu = DataManager.getBuilding()
   }
   
   override func viewWillAppear(animated: Bool) {
