@@ -18,9 +18,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    let path = NSBundle.mainBundle().pathForResource("BuildingMenu.plist", ofType:nil )
-    mainMenu = NSArray(contentsOfFile: path!) as! Array
-    print(mainMenu.count)
   }
   
   override func viewWillAppear(animated: Bool) {
