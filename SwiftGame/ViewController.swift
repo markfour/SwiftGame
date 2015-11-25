@@ -32,12 +32,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     scrollView.fixImage(imageView: imageView)
   }
-  
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-  
+
   // MARK: -
   func numberOfSectionsInTableView(tableView: UITableView) -> Int {
     return 1
@@ -59,11 +54,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     return 60
   }
   
+  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    tableView.deselectRowAtIndexPath(indexPath, animated: true)
+  }
+  
   // MARK: -
   
   func configCell(cell: BuildingTableViewCell, indexPath: NSIndexPath) -> BuildingTableViewCell {
     let dict = buildingMenu[indexPath.row]
+
     cell.titleLabel.text = dict["name"] as? String
+    cell.costLabel.text = dict["cost"] as? String
+    cell.countLabel.text = dict["count"] as? String
     
     // TODO: Get to Plist
     switch indexPath.row {
@@ -85,14 +87,5 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     return cell
   }
-  
-  //  override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-  //    let cell = tableView.dequeueReusableCellWithIdentifier( "LabelCell", forIndexPath: indexPath)
-  //
-  //   ... // Configure the cell
-  //    cell.textLabel?.text = "Section \(indexPath.section) Row \(indexPath.row)"
-  //
-  //    return cell
-  //  }
 }
 

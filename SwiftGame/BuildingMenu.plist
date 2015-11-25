@@ -6,33 +6,33 @@
 		<key>name</key>
 		<string>伐採所</string>
 		<key>count</key>
-		<integer>1</integer>
+		<string>1</string>
 		<key>cost</key>
-		<integer>3</integer>
+		<string>3</string>
 	</dict>
 	<dict>
 		<key>name</key>
 		<string>小屋</string>
 		<key>count</key>
-		<integer>0</integer>
+		<string>0</string>
 		<key>cost</key>
-		<integer>3</integer>
+		<string>3</string>
 	</dict>
 	<dict>
 		<key>name</key>
 		<string>狩猟小屋</string>
 		<key>count</key>
-		<integer>0</integer>
+		<string>0</string>
 		<key>cost</key>
-		<integer>3</integer>
+		<string>3</string>
 	</dict>
 	<dict>
 		<key>name</key>
 		<string>釣り小屋</string>
 		<key>count</key>
-		<integer>0</integer>
+		<string>0</string>
 		<key>cost</key>
-		<integer>3</integer>
+		<string>3</string>
 	</dict>
 </array>
 </plist>

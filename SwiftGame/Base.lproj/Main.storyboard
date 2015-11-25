@@ -16,6 +16,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pNK-YT-DeU">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="KJG-na-EKa"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="KJG-na-EKa"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="KJG-na-EKa"/>
+                                    </mask>
+                                </variation>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vhM-JD-JRt">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
@@ -47,32 +65,45 @@
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Byo-Yx-HB6" secondAttribute="bottom" id="7cC-S8-EXt"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vhM-JD-JRt" secondAttribute="bottom" id="B0i-Yi-GOd"/>
-                            <constraint firstItem="Byo-Yx-HB6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="D0V-lS-9uk"/>
+                            <constraint firstAttribute="trailing" secondItem="pNK-YT-DeU" secondAttribute="trailing" id="ER4-Jq-CsB"/>
                             <constraint firstAttribute="trailing" secondItem="Byo-Yx-HB6" secondAttribute="trailing" id="HfJ-TA-T4W"/>
                             <constraint firstItem="Byo-Yx-HB6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Mmh-QZ-BEY"/>
+                            <constraint firstItem="pNK-YT-DeU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="NVQ-wi-JAW"/>
                             <constraint firstItem="vhM-JD-JRt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aJ7-Ba-aEC"/>
+                            <constraint firstItem="pNK-YT-DeU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ba3-E8-gB2"/>
                             <constraint firstAttribute="trailing" secondItem="vhM-JD-JRt" secondAttribute="trailing" id="eoT-Nl-eiB"/>
-                            <constraint firstItem="vhM-JD-JRt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hEt-4t-aNP"/>
+                            <constraint firstItem="Byo-Yx-HB6" firstAttribute="top" secondItem="wfy-db-euE" secondAttribute="top" id="ojr-Yv-Wcp"/>
+                            <constraint firstItem="vhM-JD-JRt" firstAttribute="top" secondItem="pNK-YT-DeU" secondAttribute="bottom" id="xqp-is-jyi"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="pNK-YT-DeU"/>
                                 <exclude reference="vhM-JD-JRt"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="ER4-Jq-CsB"/>
+                                <exclude reference="NVQ-wi-JAW"/>
+                                <exclude reference="ba3-E8-gB2"/>
                                 <exclude reference="aJ7-Ba-aEC"/>
                                 <exclude reference="eoT-Nl-eiB"/>
-                                <exclude reference="hEt-4t-aNP"/>
+                                <exclude reference="xqp-is-jyi"/>
+                                <exclude reference="ojr-Yv-Wcp"/>
                                 <exclude reference="B0i-Yi-GOd"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
+                                <include reference="pNK-YT-DeU"/>
                                 <include reference="vhM-JD-JRt"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="ER4-Jq-CsB"/>
+                                <include reference="NVQ-wi-JAW"/>
+                                <include reference="ba3-E8-gB2"/>
                                 <include reference="aJ7-Ba-aEC"/>
                                 <include reference="eoT-Nl-eiB"/>
-                                <include reference="hEt-4t-aNP"/>
+                                <include reference="xqp-is-jyi"/>
+                                <include reference="ojr-Yv-Wcp"/>
                                 <include reference="B0i-Yi-GOd"/>
                             </mask>
                         </variation>
@@ -85,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="183" y="5"/>
+            <point key="canvasLocation" x="183" y="4.5"/>
         </scene>
     </scenes>
     <resources>
