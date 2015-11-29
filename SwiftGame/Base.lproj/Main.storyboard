@@ -43,10 +43,10 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="uUv-5Q-mmC"/>
                                 </connections>
                             </tableView>
-                            <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Byo-Yx-HB6">
+                            <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Byo-Yx-HB6">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iland.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="OGk-pv-Ebq">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="iland.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="OGk-pv-Ebq">
                                         <rect key="frame" x="0.0" y="0.0" width="500" height="386"/>
                                         <animations/>
                                     </imageView>
@@ -81,6 +81,7 @@
                                 <exclude reference="vhM-JD-JRt"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="B0i-Yi-GOd"/>
                                 <exclude reference="ER4-Jq-CsB"/>
                                 <exclude reference="NVQ-wi-JAW"/>
                                 <exclude reference="ba3-E8-gB2"/>
@@ -88,7 +89,6 @@
                                 <exclude reference="eoT-Nl-eiB"/>
                                 <exclude reference="xqp-is-jyi"/>
                                 <exclude reference="ojr-Yv-Wcp"/>
-                                <exclude reference="B0i-Yi-GOd"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -97,6 +97,7 @@
                                 <include reference="vhM-JD-JRt"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="B0i-Yi-GOd"/>
                                 <include reference="ER4-Jq-CsB"/>
                                 <include reference="NVQ-wi-JAW"/>
                                 <include reference="ba3-E8-gB2"/>
@@ -104,7 +105,6 @@
                                 <include reference="eoT-Nl-eiB"/>
                                 <include reference="xqp-is-jyi"/>
                                 <include reference="ojr-Yv-Wcp"/>
-                                <include reference="B0i-Yi-GOd"/>
                             </mask>
                         </variation>
                     </view>
