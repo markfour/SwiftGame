@@ -16,45 +16,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Byo-Yx-HB6">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="iland.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="OGk-pv-Ebq">
-                                        <rect key="frame" x="0.0" y="0.0" width="500" height="386"/>
-                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
-                                        </variation>
-                                    </imageView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="OGk-pv-Ebq" firstAttribute="leading" secondItem="Byo-Yx-HB6" secondAttribute="leading" id="Yh6-1Z-Icf"/>
-                                    <constraint firstAttribute="bottom" secondItem="OGk-pv-Ebq" secondAttribute="bottom" id="ad8-1N-Hil"/>
-                                    <constraint firstItem="OGk-pv-Ebq" firstAttribute="top" secondItem="Byo-Yx-HB6" secondAttribute="top" id="eUH-Od-D1t"/>
-                                    <constraint firstAttribute="trailing" secondItem="OGk-pv-Ebq" secondAttribute="trailing" id="jLT-H9-KEg"/>
-                                </constraints>
-                            </scrollView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G7n-dg-OOS">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="K3b-AT-iUx"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Ppe-Kh-V2h"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.61176470588235299" green="0.53333333333333333" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Byo-Yx-HB6" secondAttribute="bottom" id="7cC-S8-EXt"/>
-                            <constraint firstAttribute="trailing" secondItem="Byo-Yx-HB6" secondAttribute="trailing" id="HfJ-TA-T4W"/>
-                            <constraint firstItem="Byo-Yx-HB6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Mmh-QZ-BEY"/>
-                            <constraint firstItem="Byo-Yx-HB6" firstAttribute="top" secondItem="wfy-db-euE" secondAttribute="top" id="ojr-Yv-Wcp"/>
+                            <constraint firstItem="G7n-dg-OOS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="D5y-Id-uIj"/>
+                            <constraint firstAttribute="trailing" secondItem="G7n-dg-OOS" secondAttribute="trailing" id="SQW-Jg-QZy"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="G7n-dg-OOS" secondAttribute="bottom" id="mZ0-fX-Vne"/>
+                            <constraint firstItem="G7n-dg-OOS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="t03-al-SSZ"/>
                         </constraints>
                         <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="G7n-dg-OOS"/>
+                            </mask>
                             <mask key="constraints">
-                                <exclude reference="ojr-Yv-Wcp"/>
+                                <exclude reference="D5y-Id-uIj"/>
+                                <exclude reference="SQW-Jg-QZy"/>
+                                <exclude reference="t03-al-SSZ"/>
+                                <exclude reference="mZ0-fX-Vne"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="G7n-dg-OOS"/>
+                            </mask>
                             <mask key="constraints">
-                                <include reference="ojr-Yv-Wcp"/>
+                                <include reference="D5y-Id-uIj"/>
+                                <include reference="SQW-Jg-QZy"/>
+                                <include reference="t03-al-SSZ"/>
+                                <include reference="mZ0-fX-Vne"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="OGk-pv-Ebq" id="U1E-RO-gch"/>
-                        <outlet property="scrollView" destination="Byo-Yx-HB6" id="4sP-Hh-ee1"/>
+                        <outlet property="buildingsTable" destination="G7n-dg-OOS" id="1XJ-OB-haM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -62,7 +64,4 @@
             <point key="canvasLocation" x="183" y="4.5"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="iland.jpg" width="500" height="386"/>
-    </resources>
 </document>

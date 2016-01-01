@@ -10,8 +10,6 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
   @IBOutlet weak var buildingsTable: UITableView!
-  @IBOutlet weak var scrollView: UIScrollView!
-  @IBOutlet weak var imageView: UIImageView!
   
   var buildingMenu = [Dictionary<String, AnyObject>]()
   
@@ -20,6 +18,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     buildingMenu = DataManager.getBuilding()
     buildingsTable.registerClass(BuildingTableViewCell.classForCoder(), forCellReuseIdentifier: "Cell")
+//    buildingsTable.registerNib(UINib(nibName: "Status", bundle: nil), forHeaderFooterViewReuseIdentifier: "")
   }
   
   override func viewWillAppear(animated: Bool) {
@@ -29,8 +28,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
-    
-    scrollView.fixImage(imageView: imageView)
   }
 
   // MARK: -
@@ -44,7 +41,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
-    let a = tableView.dequeueReusableCellWithIdentifier("BuildingTableViewCell", forIndexPath: indexPath)
+    let a = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
     let cell = configCell(a as! BuildingTableViewCell, indexPath: indexPath)
     
     return cell
