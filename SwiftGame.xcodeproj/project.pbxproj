@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C44D3E921BEF3B9D0074B1C3 /* BuildingMenu.plist in Resources */ = {isa = PBXBuildFile; fileRef = C44D3E911BEF3B9D0074B1C3 /* BuildingMenu.plist */; settings = {ASSET_TAGS = (); }; };
-		C44D3E951BEF46F70074B1C3 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D3E941BEF46F70074B1C3 /* DataManager.swift */; settings = {ASSET_TAGS = (); }; };
-		C44D3E971BEF841E0074B1C3 /* BuildingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D3E961BEF841E0074B1C3 /* BuildingTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		C44D3E991BEFA4AB0074B1C3 /* UICIolor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D3E981BEFA4AB0074B1C3 /* UICIolor+Hex.swift */; settings = {ASSET_TAGS = (); }; };
-		C46124221BEA28F600EE0F0E /* TestEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46124211BEA28F600EE0F0E /* TestEmpty.swift */; settings = {ASSET_TAGS = (); }; };
-		C46124241BEB977700EE0F0E /* Status.xib in Resources */ = {isa = PBXBuildFile; fileRef = C46124231BEB977700EE0F0E /* Status.xib */; settings = {ASSET_TAGS = (); }; };
+		C44D3E921BEF3B9D0074B1C3 /* BuildingMenu.plist in Resources */ = {isa = PBXBuildFile; fileRef = C44D3E911BEF3B9D0074B1C3 /* BuildingMenu.plist */; };
+		C44D3E951BEF46F70074B1C3 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D3E941BEF46F70074B1C3 /* DataManager.swift */; };
+		C44D3E971BEF841E0074B1C3 /* BuildingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D3E961BEF841E0074B1C3 /* BuildingTableViewCell.swift */; };
+		C44D3E991BEFA4AB0074B1C3 /* UICIolor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D3E981BEFA4AB0074B1C3 /* UICIolor+Hex.swift */; };
+		C46124221BEA28F600EE0F0E /* TestEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46124211BEA28F600EE0F0E /* TestEmpty.swift */; };
+		C46124241BEB977700EE0F0E /* Status.xib in Resources */ = {isa = PBXBuildFile; fileRef = C46124231BEB977700EE0F0E /* Status.xib */; };
 		C49F544D1BD7BE9E00F42D75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F544C1BD7BE9E00F42D75 /* AppDelegate.swift */; };
 		C49F544F1BD7BE9E00F42D75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F544E1BD7BE9E00F42D75 /* ViewController.swift */; };
 		C49F54521BD7BE9E00F42D75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C49F54501BD7BE9E00F42D75 /* Main.storyboard */; };
@@ -20,9 +20,9 @@
 		C49F54571BD7BE9E00F42D75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C49F54551BD7BE9E00F42D75 /* LaunchScreen.storyboard */; };
 		C49F54621BD7BE9E00F42D75 /* SwiftGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F54611BD7BE9E00F42D75 /* SwiftGameTests.swift */; };
 		C49F546D1BD7BE9E00F42D75 /* SwiftGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F546C1BD7BE9E00F42D75 /* SwiftGameUITests.swift */; };
-		C4AF82801BE4DAFB00EDA623 /* iland.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4AF827F1BE4DAFB00EDA623 /* iland.jpg */; settings = {ASSET_TAGS = (); }; };
-		C4FAE1301BE5E4E5001D8053 /* UIScrollView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FAE12F1BE5E4E5001D8053 /* UIScrollView+Image.swift */; settings = {ASSET_TAGS = (); }; };
-		C4FAE1321BE5FCB2001D8053 /* UIImage+ResizeAndCrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FAE1311BE5FCB2001D8053 /* UIImage+ResizeAndCrop.swift */; settings = {ASSET_TAGS = (); }; };
+		C4AF82801BE4DAFB00EDA623 /* iland.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4AF827F1BE4DAFB00EDA623 /* iland.jpg */; };
+		C4FAE1301BE5E4E5001D8053 /* UIScrollView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FAE12F1BE5E4E5001D8053 /* UIScrollView+Image.swift */; };
+		C4FAE1321BE5FCB2001D8053 /* UIImage+ResizeAndCrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FAE1311BE5FCB2001D8053 /* UIImage+ResizeAndCrop.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
