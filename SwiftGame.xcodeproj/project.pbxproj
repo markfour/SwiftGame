@@ -23,6 +23,7 @@
 		C4AF82801BE4DAFB00EDA623 /* iland.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4AF827F1BE4DAFB00EDA623 /* iland.jpg */; };
 		C4FAE1301BE5E4E5001D8053 /* UIScrollView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FAE12F1BE5E4E5001D8053 /* UIScrollView+Image.swift */; };
 		C4FAE1321BE5FCB2001D8053 /* UIImage+ResizeAndCrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FAE1311BE5FCB2001D8053 /* UIImage+ResizeAndCrop.swift */; };
+		C4FEB3E81C3682DB00DFCD35 /* BuildInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FEB3E71C3682DB00DFCD35 /* BuildInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		C4AF827F1BE4DAFB00EDA623 /* iland.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iland.jpg; sourceTree = "<group>"; };
 		C4FAE12F1BE5E4E5001D8053 /* UIScrollView+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Image.swift"; sourceTree = "<group>"; };
 		C4FAE1311BE5FCB2001D8053 /* UIImage+ResizeAndCrop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+ResizeAndCrop.swift"; sourceTree = "<group>"; };
+		C4FEB3E71C3682DB00DFCD35 /* BuildInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BuildInfo.swift; path = ../../GraphAnimation/GraphAnimation/BuildInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				C4FAE1311BE5FCB2001D8053 /* UIImage+ResizeAndCrop.swift */,
 				C4FAE12F1BE5E4E5001D8053 /* UIScrollView+Image.swift */,
 				C49F544E1BD7BE9E00F42D75 /* ViewController.swift */,
+				C4FEB3E71C3682DB00DFCD35 /* BuildInfo.swift */,
 			);
 			path = SwiftGame;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				C4FAE1301BE5E4E5001D8053 /* UIScrollView+Image.swift in Sources */,
 				C49F544D1BD7BE9E00F42D75 /* AppDelegate.swift in Sources */,
 				C4FAE1321BE5FCB2001D8053 /* UIImage+ResizeAndCrop.swift in Sources */,
+				C4FEB3E81C3682DB00DFCD35 /* BuildInfo.swift in Sources */,
 				C44D3E991BEFA4AB0074B1C3 /* UICIolor+Hex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

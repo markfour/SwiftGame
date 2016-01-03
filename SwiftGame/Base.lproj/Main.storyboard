@@ -19,6 +19,108 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G7n-dg-OOS">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="yzk-hX-pFw" userLabel="BuildingTableViewCell" customClass="BuildingTableViewCell" customModule="SwiftGame" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yzk-hX-pFw" id="6vu-CL-24P">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mZZ-my-hTY">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="110"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skA-bR-tX5" userLabel="title">
+                                                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Tt0-2K-j1w">
+                                                            <rect key="frame" x="0.0" y="0.0" width="110" height="200"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSA-j8-Mjj" userLabel="cost">
+                                                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="42" height="22"/>
+                                                                    </variation>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDl-rx-AiL" userLabel="count">
+                                                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
+                                                                        <rect key="frame" x="0.0" y="22" width="42" height="21"/>
+                                                                    </variation>
+                                                                </label>
+                                                            </subviews>
+                                                            <variation key="default">
+                                                                <mask key="subviews">
+                                                                    <exclude reference="TSA-j8-Mjj"/>
+                                                                    <exclude reference="IDl-rx-AiL"/>
+                                                                </mask>
+                                                            </variation>
+                                                            <variation key="heightClass=regular-widthClass=compact">
+                                                                <mask key="subviews">
+                                                                    <include reference="TSA-j8-Mjj"/>
+                                                                    <include reference="IDl-rx-AiL"/>
+                                                                </mask>
+                                                            </variation>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <variation key="default">
+                                                        <mask key="subviews">
+                                                            <exclude reference="skA-bR-tX5"/>
+                                                            <exclude reference="Tt0-2K-j1w"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <mask key="subviews">
+                                                            <include reference="skA-bR-tX5"/>
+                                                            <include reference="Tt0-2K-j1w"/>
+                                                        </mask>
+                                                    </variation>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="mZZ-my-hTY" secondAttribute="trailing" constant="6" id="1Vz-5F-35w"/>
+                                                <constraint firstAttribute="bottom" secondItem="mZZ-my-hTY" secondAttribute="bottom" id="jYg-RU-7a8"/>
+                                                <constraint firstItem="mZZ-my-hTY" firstAttribute="top" secondItem="6vu-CL-24P" secondAttribute="top" id="l8t-5b-SxF"/>
+                                                <constraint firstItem="mZZ-my-hTY" firstAttribute="leading" secondItem="6vu-CL-24P" secondAttribute="leading" constant="6" id="w2c-nl-ugq"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="mZZ-my-hTY"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <exclude reference="1Vz-5F-35w"/>
+                                                    <exclude reference="jYg-RU-7a8"/>
+                                                    <exclude reference="l8t-5b-SxF"/>
+                                                    <exclude reference="w2c-nl-ugq"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="mZZ-my-hTY"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <include reference="1Vz-5F-35w"/>
+                                                    <include reference="jYg-RU-7a8"/>
+                                                    <include reference="l8t-5b-SxF"/>
+                                                    <include reference="w2c-nl-ugq"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="costLabel" destination="TSA-j8-Mjj" id="GeG-Ra-iGI"/>
+                                            <outlet property="countLabel" destination="IDl-rx-AiL" id="78U-vP-2Hr"/>
+                                            <outlet property="titleLabel" destination="skA-bR-tX5" id="FVy-VX-bgq"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="K3b-AT-iUx"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Ppe-Kh-V2h"/>
@@ -56,7 +158,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="buildingsTable" destination="G7n-dg-OOS" id="1XJ-OB-haM"/>
+                        <outlet property="buildingsTableView" destination="G7n-dg-OOS" id="J84-EP-svt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

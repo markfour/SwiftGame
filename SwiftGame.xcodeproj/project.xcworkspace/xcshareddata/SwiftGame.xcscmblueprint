@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "54E1F0DF7A6D51441E91AE7A180A3471563FBF2C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "028879CB2B23CA35C2CEE51312775A9BEE388C66" : 0,
+    "54E1F0DF7A6D51441E91AE7A180A3471563FBF2C" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4D0F70C7-C1A1-45FC-857F-BD42FB4993EF",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "028879CB2B23CA35C2CEE51312775A9BEE388C66" : "GraphAnimation\/",
+    "54E1F0DF7A6D51441E91AE7A180A3471563FBF2C" : "SwiftGame\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SwiftGame",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SwiftGame.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/markfour\/GraphAnimation.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "028879CB2B23CA35C2CEE51312775A9BEE388C66"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/markfour\/SwiftGame.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "54E1F0DF7A6D51441E91AE7A180A3471563FBF2C"
+    }
+  ]
+}

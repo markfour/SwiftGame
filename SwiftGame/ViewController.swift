@@ -9,7 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-  @IBOutlet weak var buildingsTable: UITableView!
+//  @IBOutlet weak var buildingsTable: UITableView!
+  @IBOutlet weak var buildingsTableView: UITableView!
+
   
   var buildingMenu = [Dictionary<String, AnyObject>]()
   
@@ -17,7 +19,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     super.viewDidLoad()
     
     buildingMenu = DataManager.getBuilding()
-    buildingsTable.registerClass(BuildingTableViewCell.classForCoder(), forCellReuseIdentifier: "Cell")
+    buildingsTableView.registerClass(BuildingTableViewCell.classForCoder(), forCellReuseIdentifier: "Cell")
 //    buildingsTable.registerNib(UINib(nibName: "Status", bundle: nil), forHeaderFooterViewReuseIdentifier: "")
   }
   
@@ -41,8 +43,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
-    let a = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-    let cell = configCell(a as! BuildingTableViewCell, indexPath: indexPath)
+//    let aCell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! BuildingTableViewCell
+    
+    var cell: BuildingTableViewCell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! BuildingTableViewCell
+
+    
+    cell = configCell(cell, indexPath: indexPath)
+    
     
     return cell
   }
@@ -60,9 +67,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   func configCell(cell: BuildingTableViewCell, indexPath: NSIndexPath) -> BuildingTableViewCell {
     let dict = buildingMenu[indexPath.row]
     
-    cell.titleLabel?.text = dict["name"] as? String
-    cell.costLabel?.text = dict["cost"] as? String
-    cell.countLabel?.text = dict["count"] as? String
+    cell.titleLabel.text = dict["name"] as? String
+    cell.costLabel.text = (dict["cost"] as? String)!
+    cell.countLabel.text = (dict["count"] as? String)!
     
     // TODO: Get to Plist
     switch indexPath.row {

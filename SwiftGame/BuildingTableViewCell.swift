@@ -9,30 +9,51 @@
 import UIKit
 
 class BuildingTableViewCell: UITableViewCell {
-  @IBOutlet weak var icon: UIImageView!
-  @IBOutlet weak var titleLabel: UILabel!
-  @IBOutlet weak var costLabel: UILabel!
-  @IBOutlet weak var countLabel: UILabel!
-  
+  let icon = UIImageView.init()
+  let titleLabel = UILabel.init()
+  let costLabel = UILabel.init()
+  let countLabel = UILabel.init()
+
   override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
     
     backgroundColor = UIColor.redColor()
     
-//    titleLabel.frame = CGRectMake(8, 0, 100, 60)
-//    titleLabel.textColor = UIColor.hexColor("EFEFEF")
-//    
-//    costLabel.frame = CGRectMake(frame.width - 8 - 60, 0, 60, 30)
-//    costLabel.textColor = UIColor.hexColor("EFEFEF")
-//    addSubview(costLabel)
-//    
-//    countLabel.frame = CGRectMake(frame.width - 8 - 60, 30, 60, 30)
-//    countLabel.textColor = UIColor.hexColor("EFEFEF")
-//    addSubview(countLabel)
+    titleLabel.frame = CGRectMake(8, 0, 100, 60)
+    titleLabel.textColor = UIColor.hexColor("EFEFEF")
+    addSubview(titleLabel)
+    
+    costLabel.frame = CGRectMake(frame.width - 8 - 60, 0, 60, 30)
+    costLabel.textColor = UIColor.hexColor("EFEFEF")
+    addSubview(costLabel)
+    
+    countLabel.frame = CGRectMake(frame.width - 8 - 60, 30, 60, 30)
+    countLabel.textColor = UIColor.hexColor("EFEFEF")
+    addSubview(countLabel)
   }
 
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
   }
+  
+//  override func awakeFromNib() {
+//    super.awakeFromNib()
+//    // Initialization code
+//  }
+//  
+//  override func setSelected(selected: Bool, animated: Bool) {
+//    super.setSelected(selected, animated: animated)
+//    
+//    // Configure the view for the selected state
+//  }
+//  
+//  func setCell(buildInfo :BuildInfo) {
+//    titleLabel.text = buildInfo.displayName
+////    costLabel.text = String(buildInfo.cost)
+////    countLabel.text = String(buildInfo.count)
+//  }
+//  func setCell2() {
+//    titleLabel.text = "test"
+//  }
 }
 
