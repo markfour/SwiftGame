@@ -9,9 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-//  @IBOutlet weak var buildingsTable: UITableView!
   @IBOutlet weak var buildingsTableView: UITableView!
-
   
   var buildingMenu = [Dictionary<String, AnyObject>]()
   
@@ -20,7 +18,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     buildingMenu = DataManager.getBuilding()
     buildingsTableView.registerClass(BuildingTableViewCell.classForCoder(), forCellReuseIdentifier: "Cell")
-//    buildingsTable.registerNib(UINib(nibName: "Status", bundle: nil), forHeaderFooterViewReuseIdentifier: "")
   }
   
   override func viewWillAppear(animated: Bool) {
@@ -31,7 +28,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
   }
-
+  
   // MARK: -
   func numberOfSectionsInTableView(tableView: UITableView) -> Int {
     return 1
@@ -42,15 +39,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-
-//    let aCell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! BuildingTableViewCell
-    
     var cell: BuildingTableViewCell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! BuildingTableViewCell
-
-    
     cell = configCell(cell, indexPath: indexPath)
-    
-    
     return cell
   }
   

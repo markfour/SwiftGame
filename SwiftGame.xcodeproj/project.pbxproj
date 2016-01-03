@@ -12,7 +12,6 @@
 		C44D3E971BEF841E0074B1C3 /* BuildingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D3E961BEF841E0074B1C3 /* BuildingTableViewCell.swift */; };
 		C44D3E991BEFA4AB0074B1C3 /* UICIolor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D3E981BEFA4AB0074B1C3 /* UICIolor+Hex.swift */; };
 		C46124221BEA28F600EE0F0E /* TestEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46124211BEA28F600EE0F0E /* TestEmpty.swift */; };
-		C46124241BEB977700EE0F0E /* Status.xib in Resources */ = {isa = PBXBuildFile; fileRef = C46124231BEB977700EE0F0E /* Status.xib */; };
 		C49F544D1BD7BE9E00F42D75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F544C1BD7BE9E00F42D75 /* AppDelegate.swift */; };
 		C49F544F1BD7BE9E00F42D75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F544E1BD7BE9E00F42D75 /* ViewController.swift */; };
 		C49F54521BD7BE9E00F42D75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C49F54501BD7BE9E00F42D75 /* Main.storyboard */; };
@@ -20,7 +19,6 @@
 		C49F54571BD7BE9E00F42D75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C49F54551BD7BE9E00F42D75 /* LaunchScreen.storyboard */; };
 		C49F54621BD7BE9E00F42D75 /* SwiftGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F54611BD7BE9E00F42D75 /* SwiftGameTests.swift */; };
 		C49F546D1BD7BE9E00F42D75 /* SwiftGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49F546C1BD7BE9E00F42D75 /* SwiftGameUITests.swift */; };
-		C4AF82801BE4DAFB00EDA623 /* iland.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4AF827F1BE4DAFB00EDA623 /* iland.jpg */; };
 		C4FAE1301BE5E4E5001D8053 /* UIScrollView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FAE12F1BE5E4E5001D8053 /* UIScrollView+Image.swift */; };
 		C4FAE1321BE5FCB2001D8053 /* UIImage+ResizeAndCrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FAE1311BE5FCB2001D8053 /* UIImage+ResizeAndCrop.swift */; };
 		C4FEB3E81C3682DB00DFCD35 /* BuildInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FEB3E71C3682DB00DFCD35 /* BuildInfo.swift */; };
@@ -49,7 +47,6 @@
 		C44D3E961BEF841E0074B1C3 /* BuildingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingTableViewCell.swift; sourceTree = "<group>"; };
 		C44D3E981BEFA4AB0074B1C3 /* UICIolor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICIolor+Hex.swift"; sourceTree = "<group>"; };
 		C46124211BEA28F600EE0F0E /* TestEmpty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestEmpty.swift; sourceTree = "<group>"; };
-		C46124231BEB977700EE0F0E /* Status.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Status.xib; sourceTree = "<group>"; };
 		C49F54491BD7BE9E00F42D75 /* SwiftGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C49F544C1BD7BE9E00F42D75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C49F544E1BD7BE9E00F42D75 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,7 +60,6 @@
 		C49F54681BD7BE9E00F42D75 /* SwiftGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C49F546C1BD7BE9E00F42D75 /* SwiftGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftGameUITests.swift; sourceTree = "<group>"; };
 		C49F546E1BD7BE9E00F42D75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C4AF827F1BE4DAFB00EDA623 /* iland.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iland.jpg; sourceTree = "<group>"; };
 		C4FAE12F1BE5E4E5001D8053 /* UIScrollView+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Image.swift"; sourceTree = "<group>"; };
 		C4FAE1311BE5FCB2001D8053 /* UIImage+ResizeAndCrop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+ResizeAndCrop.swift"; sourceTree = "<group>"; };
 		C4FEB3E71C3682DB00DFCD35 /* BuildInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BuildInfo.swift; path = ../../GraphAnimation/GraphAnimation/BuildInfo.swift; sourceTree = "<group>"; };
@@ -119,19 +115,17 @@
 			children = (
 				C49F544C1BD7BE9E00F42D75 /* AppDelegate.swift */,
 				C49F54531BD7BE9E00F42D75 /* Assets.xcassets */,
+				C4FEB3E71C3682DB00DFCD35 /* BuildInfo.swift */,
 				C44D3E911BEF3B9D0074B1C3 /* BuildingMenu.plist */,
 				C44D3E961BEF841E0074B1C3 /* BuildingTableViewCell.swift */,
 				C44D3E941BEF46F70074B1C3 /* DataManager.swift */,
-				C4AF827F1BE4DAFB00EDA623 /* iland.jpg */,
 				C49F54581BD7BE9E00F42D75 /* Info.plist */,
 				C49F54551BD7BE9E00F42D75 /* LaunchScreen.storyboard */,
 				C49F54501BD7BE9E00F42D75 /* Main.storyboard */,
-				C46124231BEB977700EE0F0E /* Status.xib */,
 				C44D3E981BEFA4AB0074B1C3 /* UICIolor+Hex.swift */,
 				C4FAE1311BE5FCB2001D8053 /* UIImage+ResizeAndCrop.swift */,
 				C4FAE12F1BE5E4E5001D8053 /* UIScrollView+Image.swift */,
 				C49F544E1BD7BE9E00F42D75 /* ViewController.swift */,
-				C4FEB3E71C3682DB00DFCD35 /* BuildInfo.swift */,
 			);
 			path = SwiftGame;
 			sourceTree = "<group>";
@@ -258,11 +252,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4AF82801BE4DAFB00EDA623 /* iland.jpg in Resources */,
 				C49F54571BD7BE9E00F42D75 /* LaunchScreen.storyboard in Resources */,
 				C49F54541BD7BE9E00F42D75 /* Assets.xcassets in Resources */,
 				C44D3E921BEF3B9D0074B1C3 /* BuildingMenu.plist in Resources */,
-				C46124241BEB977700EE0F0E /* Status.xib in Resources */,
 				C49F54521BD7BE9E00F42D75 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

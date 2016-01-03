@@ -35,25 +35,5 @@ class BuildingTableViewCell: UITableViewCell {
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
   }
-  
-//  override func awakeFromNib() {
-//    super.awakeFromNib()
-//    // Initialization code
-//  }
-//  
-//  override func setSelected(selected: Bool, animated: Bool) {
-//    super.setSelected(selected, animated: animated)
-//    
-//    // Configure the view for the selected state
-//  }
-//  
-//  func setCell(buildInfo :BuildInfo) {
-//    titleLabel.text = buildInfo.displayName
-////    costLabel.text = String(buildInfo.cost)
-////    countLabel.text = String(buildInfo.count)
-//  }
-//  func setCell2() {
-//    titleLabel.text = "test"
-//  }
 }
 
