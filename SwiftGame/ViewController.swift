@@ -55,11 +55,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   // MARK: -
   
   func configCell(cell: BuildingTableViewCell, indexPath: NSIndexPath) -> BuildingTableViewCell {
-    let dict = buildingMenu[indexPath.row]
+    let dict: Dictionary = buildingMenu[indexPath.row]
     
     cell.titleLabel.text = dict["name"] as? String
-    cell.costLabel.text = (dict["cost"] as? String)!
-    cell.countLabel.text = (dict["count"] as? String)!
+    cell.costLabel.text = dict["cost"] as? String
+    cell.countLabel.text = dict["count"] as? String
     
     return cell
   }
