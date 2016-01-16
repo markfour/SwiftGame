@@ -113,6 +113,7 @@
 		C49F544B1BD7BE9E00F42D75 /* SwiftGame */ = {
 			isa = PBXGroup;
 			children = (
+				C4DD80211C49F13E00F7BFC4 /* View */,
 				C49F544C1BD7BE9E00F42D75 /* AppDelegate.swift */,
 				C49F54531BD7BE9E00F42D75 /* Assets.xcassets */,
 				C4FEB3E71C3682DB00DFCD35 /* BuildInfo.swift */,
@@ -147,6 +148,13 @@
 				C49F546E1BD7BE9E00F42D75 /* Info.plist */,
 			);
 			path = SwiftGameUITests;
+			sourceTree = "<group>";
+		};
+		C4DD80211C49F13E00F7BFC4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
