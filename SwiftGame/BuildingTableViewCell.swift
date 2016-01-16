@@ -16,19 +16,17 @@ class BuildingTableViewCell: UITableViewCell {
 
   override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
-    
-    backgroundColor = UIColor.redColor()
-    
+
     titleLabel.frame = CGRectMake(8, 0, 100, 60)
-    titleLabel.textColor = UIColor.hexColor("EFEFEF")
+    titleLabel.textColor = UIColor.hexColor("2c3e50")
     addSubview(titleLabel)
     
     costLabel.frame = CGRectMake(frame.width - 8 - 60, 0, 60, 30)
-    costLabel.textColor = UIColor.hexColor("EFEFEF")
+    costLabel.textColor = UIColor.hexColor("2c3e50")
     addSubview(costLabel)
     
     countLabel.frame = CGRectMake(frame.width - 8 - 60, 30, 60, 30)
-    countLabel.textColor = UIColor.hexColor("EFEFEF")
+    countLabel.textColor = UIColor.hexColor("2c3e50")
     addSubview(countLabel)
   }
 

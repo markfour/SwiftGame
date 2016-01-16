@@ -20,10 +20,9 @@ struct DataManager {
   }
   
   static func saveInit() {
-    let path = NSBundle.mainBundle().pathForResource("BuildingMenu.plist", ofType:nil )
-    let building = NSArray(contentsOfFile: path!)! as Array
+    guard let path = NSBundle.mainBundle().pathForResource("BuildingMenu.plist", ofType:nil) else { return }
+    let building = NSArray(contentsOfFile: path)! as Array
     ud.setObject(building, forKey: "building")
-    
     ud.setBool(true, forKey: "init")
   }
   

@@ -26,8 +26,6 @@ extension UIScrollView {
     }
     
     imageView.image = imageView.image?.resizeToSize(resize)
-    
-    
     imageView.backgroundColor = UIColor.blueColor()
   }
 }
