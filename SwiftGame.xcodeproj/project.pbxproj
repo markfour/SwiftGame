@@ -149,7 +149,6 @@
 			isa = PBXGroup;
 			children = (
 				C44D3E961BEF841E0074B1C3 /* BuildingTableViewCell.swift */,
-				C49F544E1BD7BE9E00F42D75 /* ViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -169,6 +168,7 @@
 		C4DD80231C49F16900F7BFC4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C49F544E1BD7BE9E00F42D75 /* ViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";

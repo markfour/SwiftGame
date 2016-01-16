@@ -58,10 +58,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     let dict: Dictionary = buildingMenu[indexPath.row]
     
     cell.titleLabel.text = dict["name"] as? String
-    cell.costLabel.text = dict["cost"] as? String
-    cell.countLabel.text = dict["count"] as? String
+    if let cost = dict["cost"] as? String {
+      cell.costLabel.text = "💰 \(cost)"
+    }
+    if let count = dict["count"] as? String {
+      cell.countLabel.text = "🏛 \(count)"
+    }
+    cell.buyButton.addTarget(self, action: "onTapBuild:", forControlEvents: .TouchUpInside)
+    cell.buyButton.tag = indexPath.row
+    cell.setLayout()
     
     return cell
+  }
+  
+  func onTapBuild(selector :UIButton) {
+    print(selector.tag)
   }
 }
 
