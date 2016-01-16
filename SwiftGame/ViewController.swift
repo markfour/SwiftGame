@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
   @IBOutlet weak var buildingsTableView: UITableView!
+  @IBOutlet weak var moneyLabel: UILabel!
   
   var buildingMenu = [Dictionary<String, AnyObject>]()
   
@@ -27,6 +28,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
+    refreshMoney()
   }
   
   // MARK: -
@@ -52,8 +54,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     tableView.deselectRowAtIndexPath(indexPath, animated: true)
   }
   
-  // MARK: -
-  
   func configCell(cell: BuildingTableViewCell, indexPath: NSIndexPath) -> BuildingTableViewCell {
     let dict: Dictionary = buildingMenu[indexPath.row]
     
@@ -71,7 +71,31 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     return cell
   }
   
+  // MARK: -
+  func refreshMoney() {
+    moneyLabel.text = "💰 \(DataManager.getMoney())"
+    print(DataManager.getMoney())
+  }
+  
+  // MARK: button
+  
   func onTapBuild(selector :UIButton) {
+    // TODO MakeBuildinfo
+    let dict: Dictionary = buildingMenu[selector.tag]
+    let buildInfo = BuildInfo.init(dict: dict)
+    var money = DataManager.getMoney()
+    if buildInfo.cost <= money {
+      money -= buildInfo.cost
+      buildInfo.count++
+      
+      DataManager.setMoney(money)
+      DataManager.saveBuilding(buildingMenu)
+      
+      refreshMoney()
+      
+    } else {
+      // TODO cannot buy
+    }
     print(selector.tag)
   }
 }

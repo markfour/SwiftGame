@@ -35,13 +35,17 @@ struct DataManager {
   static func saveBuilding(building: Array<AnyObject>) {
     ud.setObject(building, forKey: "building")
   }
-  
+
+  static func setBuilding(buildInfo: BuildInfo, id: UInt) {
+    
+  }
+
   // TODO Int to Int64
   static func getMoney() -> Int {
     return ud.integerForKey("money")
   }
   
-  static func setMoney(moeny: Int) {
-    ud.setInteger(moeny, forKey: "moeny")
+  static func setMoney(money: Int) {
+    ud.setInteger(money, forKey: "money")
   }
 }
