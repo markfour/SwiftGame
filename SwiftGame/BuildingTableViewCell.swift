@@ -32,7 +32,6 @@ class BuildingTableViewCell: UITableViewCell {
     buyButton.setTitle("建築", forState: .Normal)
     buyButton.setTitleColor(UIColor.hexColor("3498db"), forState: .Normal)
     buyButton.setTitleColor(UIColor.hexColor("2980b9"), forState: .Highlighted)
-//    buyButton.backgroundColor = UIColor.redColor()
     addSubview(buyButton)
   }
 
@@ -41,8 +40,6 @@ class BuildingTableViewCell: UITableViewCell {
   }
   
   func setLayout() {
-    print("set layout \(frame)")
-
     // 右側から
     let margin: CGFloat = 8.0
     var w: CGFloat = frame.width - margin

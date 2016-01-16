@@ -74,7 +74,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   // MARK: -
   func refreshMoney() {
     moneyLabel.text = "💰 \(DataManager.getMoney())"
-    print(DataManager.getMoney())
   }
   
   // MARK: button
@@ -89,14 +88,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
       buildInfo.count++
       
       DataManager.setMoney(money)
+      buildingMenu[selector.tag] = dict
       DataManager.saveBuilding(buildingMenu)
       
       refreshMoney()
       
+      let indexPath = NSIndexPath(forRow: selector.tag, inSection: 0)
+      var cell: BuildingTableViewCell = buildingsTableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! BuildingTableViewCell
+      cell = configCell(cell, indexPath: indexPath)
+      
     } else {
       // TODO cannot buy
     }
-    print(selector.tag)
   }
 }
 
