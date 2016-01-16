@@ -73,17 +73,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   
   // MARK: -
   func refreshMoney() {
-    moneyLabel.text = "💰 \(DataManager.getMoney()) 🌳 0 🐟 0 🍞 0 🍎 0 😀 10"
+    moneyLabel.text = "💰 \(DataManager.getMoney())"
   }
   
   // MARK: button
-  @IBAction func onResetTap(sender: AnyObject) {
-    DataManager.saveInit()
-    buildingMenu = DataManager.getBuilding()
-    buildingsTableView.reloadData()
-    refreshMoney()
-  }
-
+  
   func onTapBuild(selector :UIButton) {
     // TODO MakeBuildinfo
     let dict: Dictionary = buildingMenu[selector.tag]
@@ -94,14 +88,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
       buildInfo.count++
       
       DataManager.setMoney(money)
-      buildingMenu[selector.tag] = buildInfo.toDictionary()
+      buildingMenu[selector.tag] = dict
       DataManager.saveBuilding(buildingMenu)
       
       refreshMoney()
       
       let indexPath = NSIndexPath(forRow: selector.tag, inSection: 0)
-      buildingsTableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-
+      var cell: BuildingTableViewCell = buildingsTableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! BuildingTableViewCell
+      cell = configCell(cell, indexPath: indexPath)
+      
     } else {
       // TODO cannot buy
     }
