@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 struct DataManager {
   static let ud = NSUserDefaults.standardUserDefaults()
   
@@ -20,6 +19,8 @@ struct DataManager {
   }
   
   static func saveInit() {
+    ud.setInteger(10, forKey: "money")
+    
     guard let path = NSBundle.mainBundle().pathForResource("BuildingMenu.plist", ofType:nil) else { return }
     guard let building = NSArray(contentsOfFile: path) else { return }
     ud.setObject(building, forKey: "building")
@@ -33,5 +34,14 @@ struct DataManager {
   
   static func saveBuilding(building: Array<AnyObject>) {
     ud.setObject(building, forKey: "building")
+  }
+  
+  // TODO Int to Int64
+  static func getMoney() -> Int {
+    return ud.integerForKey("money")
+  }
+  
+  static func setMoney(moeny: Int) {
+    ud.setInteger(moeny, forKey: "moeny")
   }
 }
