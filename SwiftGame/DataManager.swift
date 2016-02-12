@@ -32,11 +32,23 @@ struct DataManager {
     return array
   }
   
+  static func getBuildInfo() -> [BuildInfo] {
+    let array: Array = ud.objectForKey("building") as! [Dictionary<String, AnyObject>]
+    var buildInfomations: [BuildInfo] = []
+    
+    for dict:Dictionary<String, AnyObject> in array {
+      let info = BuildInfo(dict: dict)
+      buildInfomations.append(info)
+    }
+    
+    return buildInfomations
+  }
+  
   static func saveBuilding(building: Array<AnyObject>) {
     ud.setObject(building, forKey: "building")
   }
-
-  static func setBuilding(buildInfo: BuildInfo, id: UInt) {
+  
+  static func setBuilding(buildInfo: [BuildInfo], id: UInt) {
     
   }
 

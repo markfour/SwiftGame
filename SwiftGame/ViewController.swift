@@ -12,12 +12,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   @IBOutlet weak var buildingsTableView: UITableView!
   @IBOutlet weak var moneyLabel: UILabel!
   
-  var buildingMenu = [Dictionary<String, AnyObject>]()
+  var buildInfomations: [BuildInfo] = []
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    buildingMenu = DataManager.getBuilding()
+    buildInfomations = DataManager.getBuildInfo()
     buildingsTableView.registerClass(BuildingTableViewCell.classForCoder(), forCellReuseIdentifier: "Cell")
   }
   
@@ -37,7 +37,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   }
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return buildingMenu.count
+    return buildInfomations.count
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -55,15 +55,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   }
   
   func configCell(cell: BuildingTableViewCell, indexPath: NSIndexPath) -> BuildingTableViewCell {
-    let dict: Dictionary = buildingMenu[indexPath.row]
+    let info = buildInfomations[indexPath.row]
     
-    cell.titleLabel.text = dict["name"] as? String
-    if let cost = dict["cost"] as? String {
-      cell.costLabel.text = "💰 \(cost)"
-    }
-    if let count = dict["count"] as? String {
-      cell.countLabel.text = "🏛 \(count)"
-    }
+    cell.titleLabel.text = info.displayName
+    cell.costLabel.text = String(info.cost)
+    cell.countLabel.text = String(info.count)
     cell.buyButton.addTarget(self, action: "onTapBuild:", forControlEvents: .TouchUpInside)
     cell.buyButton.tag = indexPath.row
     cell.setLayout()
@@ -79,23 +75,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   // MARK: button
   @IBAction func onResetTap(sender: AnyObject) {
     DataManager.saveInit()
-    buildingMenu = DataManager.getBuilding()
+    buildInfomations = DataManager.getBuildInfo()
+
     buildingsTableView.reloadData()
     refreshMoney()
   }
 
   func onTapBuild(selector :UIButton) {
-    // TODO MakeBuildinfo
-    let dict: Dictionary = buildingMenu[selector.tag]
-    let buildInfo = BuildInfo.init(dict: dict)
+    let info = buildInfomations[selector.tag]
     var money = DataManager.getMoney()
-    if buildInfo.cost <= money {
-      money -= buildInfo.cost
-      buildInfo.count++
+    if info.cost <= money {
+      money -= info.cost
+      info.count++
       
       DataManager.setMoney(money)
-      buildingMenu[selector.tag] = buildInfo.toDictionary()
-      DataManager.saveBuilding(buildingMenu)
+      buildInfomations[selector.tag] = info
+//      DataManager.saveBuilding(info)
       
       refreshMoney()
       
