@@ -69,7 +69,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   
   // MARK: -
   func refreshMoney() {
-    moneyLabel.text = "💰 \(DataManager.getMoney()) 🌳 0 🐟 0 🍞 0 🍎 0 😀 10"
+    moneyLabel.text = "💰 \(DataManager.getMoney()) 🌳 0 🐟 0 🍞 0 🍎 0 😀 50% 👪 10"
   }
   
   // MARK: button
