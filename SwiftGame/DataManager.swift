@@ -51,7 +51,7 @@ struct DataManager {
   static func setBuilding(buildInfo: [BuildInfo], id: UInt) {
     
   }
-
+  
   // TODO Int to Int64
   static func getMoney() -> Int {
     return ud.integerForKey("money")
@@ -59,5 +59,11 @@ struct DataManager {
   
   static func setMoney(money: Int) {
     ud.setInteger(money, forKey: "money")
+  }
+  
+  static func addMoney(money: Int) {
+    var value = ud.integerForKey("money")
+    value += money
+    ud.setInteger(value, forKey: "money")
   }
 }

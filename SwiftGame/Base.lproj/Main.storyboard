@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -163,6 +164,12 @@
                                             <action selector="onResetTap:" destination="BYZ-38-t0r" id="roW-Bn-nES"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="VPW-Pt-aP2"/>
+                                    <barButtonItem title="Next Day" id="wi1-av-NNY">
+                                        <connections>
+                                            <action selector="onNextDayTap:" destination="BYZ-38-t0r" id="fKp-Zy-0AZ"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -196,16 +203,16 @@
                                 <exclude reference="d80-4Q-laV"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="WDE-TI-1kz"/>
+                                <exclude reference="mZ0-fX-Vne"/>
+                                <exclude reference="8ot-me-Y2x"/>
+                                <exclude reference="wzf-3t-A9c"/>
                                 <exclude reference="Lir-ip-QJ8"/>
                                 <exclude reference="SDi-mk-hDI"/>
                                 <exclude reference="n48-Sf-Uje"/>
                                 <exclude reference="D5y-Id-uIj"/>
                                 <exclude reference="SQW-Jg-QZy"/>
                                 <exclude reference="t03-al-SSZ"/>
-                                <exclude reference="8ot-me-Y2x"/>
-                                <exclude reference="wzf-3t-A9c"/>
-                                <exclude reference="WDE-TI-1kz"/>
-                                <exclude reference="mZ0-fX-Vne"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -215,16 +222,16 @@
                                 <include reference="d80-4Q-laV"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="WDE-TI-1kz"/>
+                                <include reference="mZ0-fX-Vne"/>
+                                <include reference="8ot-me-Y2x"/>
+                                <include reference="wzf-3t-A9c"/>
                                 <include reference="Lir-ip-QJ8"/>
                                 <include reference="SDi-mk-hDI"/>
                                 <include reference="n48-Sf-Uje"/>
                                 <include reference="D5y-Id-uIj"/>
                                 <include reference="SQW-Jg-QZy"/>
                                 <include reference="t03-al-SSZ"/>
-                                <include reference="8ot-me-Y2x"/>
-                                <include reference="wzf-3t-A9c"/>
-                                <include reference="WDE-TI-1kz"/>
-                                <include reference="mZ0-fX-Vne"/>
                             </mask>
                         </variation>
                     </view>

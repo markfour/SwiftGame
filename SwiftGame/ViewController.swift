@@ -28,7 +28,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
-    refreshMoney()
+    refreshData()
   }
   
   // MARK: -
@@ -68,7 +68,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   }
   
   // MARK: -
-  func refreshMoney() {
+  func refreshData() {
     moneyLabel.text = "💰 \(DataManager.getMoney()) 🌳 0 🐟 0 🍞 0 🍎 0 😀 50% 👪 10"
   }
   
@@ -78,7 +78,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     buildInfomations = DataManager.getBuildInfo()
 
     buildingsTableView.reloadData()
-    refreshMoney()
+    refreshData()
+  }
+  
+  @IBAction func onNextDayTap(sender: AnyObject) {
+    DataManager.addMoney(10)
+    
+    refreshData()
   }
 
   func onTapBuild(selector :UIButton) {
@@ -92,7 +98,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
       buildInfomations[selector.tag] = info
 //      DataManager.saveBuilding(info)
       
-      refreshMoney()
+      refreshData()
       
       let indexPath = NSIndexPath(forRow: selector.tag, inSection: 0)
       buildingsTableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
