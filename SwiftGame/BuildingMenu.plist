@@ -34,5 +34,13 @@
 		<key>cost</key>
 		<string>3</string>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>石切り場</string>
+		<key>count</key>
+		<string>1</string>
+		<key>cost</key>
+		<string>3</string>
+	</dict>
 </array>
 </plist>

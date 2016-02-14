@@ -69,7 +69,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   
   // MARK: -
   func refreshData() {
-    moneyLabel.text = "💰 \(DataManager.getMoney()) 🌳 0 🐟 0 🍞 0 🍎 0 😀 50% 👪 10"
+    moneyLabel.text = "👪 \(DataManager.getPeople()) 🍞 \(DataManager.getFood()) 🌳 \(DataManager.getWood()) ⛏ \(DataManager.getStone())"
   }
   
   // MARK: button
@@ -82,22 +82,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   }
   
   @IBAction func onNextDayTap(sender: AnyObject) {
-    DataManager.addMoney(10)
+    DataManager.addPeople(1)
+    DataManager.addWood(1)
+    DataManager.addStone(1)
     
     refreshData()
   }
 
   func onTapBuild(selector :UIButton) {
     let info = buildInfomations[selector.tag]
-    var money = DataManager.getMoney()
-    if info.cost <= money {
-      money -= info.cost
-      info.count++
+    if info.cost <= DataManager.getWood() {
+      DataManager.addWood(-info.count)
       
-      DataManager.setMoney(money)
       buildInfomations[selector.tag] = info
-//      DataManager.saveBuilding(info)
-      
+
       refreshData()
       
       let indexPath = NSIndexPath(forRow: selector.tag, inSection: 0)

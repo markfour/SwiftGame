@@ -8,6 +8,13 @@
 
 import Foundation
 
+struct Status {
+  static let people = "peple"
+  static let food = "food"
+  static let wood = "wood"
+  static let stone = "stone"
+}
+
 struct DataManager {
   static let ud = NSUserDefaults.standardUserDefaults()
   
@@ -19,7 +26,10 @@ struct DataManager {
   }
   
   static func saveInit() {
-    ud.setInteger(10, forKey: "money")
+    ud.setInteger(10, forKey: Status.people)
+    ud.setInteger(10, forKey: Status.food)
+    ud.setInteger(10, forKey: Status.wood)
+    ud.setInteger(10, forKey: Status.stone)
     
     guard let path = NSBundle.mainBundle().pathForResource("BuildingMenu.plist", ofType:nil) else { return }
     guard let building = NSArray(contentsOfFile: path) else { return }
@@ -53,17 +63,64 @@ struct DataManager {
   }
   
   // TODO Int to Int64
-  static func getMoney() -> Int {
-    return ud.integerForKey("money")
+
+  // People
+  static func getPeople() -> Int {
+    return ud.integerForKey(Status.people)
   }
   
-  static func setMoney(money: Int) {
-    ud.setInteger(money, forKey: "money")
+  static func setPeople(value: Int) {
+    ud.setInteger(value, forKey: Status.people)
   }
   
-  static func addMoney(money: Int) {
-    var value = ud.integerForKey("money")
-    value += money
-    ud.setInteger(value, forKey: "money")
+  static func addPeople(value: Int) {
+    var _value = ud.integerForKey(Status.people)
+    _value += value
+    ud.setInteger(_value, forKey: Status.people)
+  }
+  
+  static func getFood() -> Int {
+    return ud.integerForKey(Status.food)
+  }
+  
+  // Food
+  static func setFood(value: Int) {
+    ud.setInteger(value, forKey: Status.food)
+  }
+  
+  static func addFood(value: Int) {
+    var _value = ud.integerForKey(Status.food)
+    _value += value
+    ud.setInteger(_value, forKey: Status.food)
+  }
+  
+  // Wood
+  static func getWood() -> Int {
+    return ud.integerForKey(Status.wood)
+  }
+  
+  static func setWood(value: Int) {
+    ud.setInteger(value, forKey: Status.wood)
+  }
+  
+  static func addWood(value: Int) {
+    var _value = ud.integerForKey(Status.wood)
+    _value += value
+    ud.setInteger(_value, forKey: Status.wood)
+  }
+  
+  // Stone
+  static func getStone() -> Int {
+    return ud.integerForKey(Status.stone)
+  }
+  
+  static func setStone(value: Int) {
+    ud.setInteger(value, forKey: Status.stone)
+  }
+  
+  static func addStone(value: Int) {
+    var _value = ud.integerForKey(Status.stone)
+    _value += value
+    ud.setInteger(_value, forKey: Status.stone)
   }
 }
