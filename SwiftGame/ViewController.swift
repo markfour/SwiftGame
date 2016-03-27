@@ -60,7 +60,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     cell.titleLabel.text = info.displayName
     cell.costLabel.text = String(info.cost)
     cell.countLabel.text = String(info.count)
-    cell.buyButton.addTarget(self, action: "onTapBuild:", forControlEvents: .TouchUpInside)
+    cell.buyButton.addTarget(self, action: #selector(ViewController.onTapBuild(_:)), forControlEvents: .TouchUpInside)
     cell.buyButton.tag = indexPath.row
     cell.setLayout()
     
