@@ -93,7 +93,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     let info = buildInfomations[selector.tag]
     if info.cost <= DataManager.getWood() {
       DataManager.addWood(-info.count)
-      
+      info.count += 1
       buildInfomations[selector.tag] = info
 
       refreshData()
