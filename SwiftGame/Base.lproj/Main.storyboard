@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wAx-St-Vpr">
-                                <rect key="frame" x="0.0" y="0.0" width="200" height="110"/>
+                                <rect key="frame" x="28" y="20" width="544" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jom-jf-BKA">
-                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="544" height="44"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -31,42 +31,32 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="vW5-VM-qcX"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="vW5-VM-qcX"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="vW5-VM-qcX"/>
-                                    </mask>
-                                </variation>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G7n-dg-OOS">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="yzk-hX-pFw" userLabel="BuildingTableViewCell" customClass="BuildingTableViewCell" customModule="SwiftGame" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yzk-hX-pFw" id="6vu-CL-24P">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mZZ-my-hTY">
-                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="110"/>
+                                                    <rect key="frame" x="6" y="0.0" width="588" height="43"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skA-bR-tX5" userLabel="title">
-                                                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="546" height="43"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Tt0-2K-j1w">
-                                                            <rect key="frame" x="0.0" y="0.0" width="110" height="200"/>
+                                                            <rect key="frame" x="546" y="0.0" width="42" height="43"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSA-j8-Mjj" userLabel="cost">
-                                                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSA-j8-Mjj" userLabel="cost">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="42" height="22"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -75,7 +65,7 @@
                                                                     </variation>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDl-rx-AiL" userLabel="count">
-                                                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                                    <rect key="frame" x="0.0" y="22" width="42" height="21"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -84,32 +74,8 @@
                                                                     </variation>
                                                                 </label>
                                                             </subviews>
-                                                            <variation key="default">
-                                                                <mask key="subviews">
-                                                                    <exclude reference="TSA-j8-Mjj"/>
-                                                                    <exclude reference="IDl-rx-AiL"/>
-                                                                </mask>
-                                                            </variation>
-                                                            <variation key="heightClass=regular-widthClass=compact">
-                                                                <mask key="subviews">
-                                                                    <include reference="TSA-j8-Mjj"/>
-                                                                    <include reference="IDl-rx-AiL"/>
-                                                                </mask>
-                                                            </variation>
                                                         </stackView>
                                                     </subviews>
-                                                    <variation key="default">
-                                                        <mask key="subviews">
-                                                            <exclude reference="skA-bR-tX5"/>
-                                                            <exclude reference="Tt0-2K-j1w"/>
-                                                        </mask>
-                                                    </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact">
-                                                        <mask key="subviews">
-                                                            <include reference="skA-bR-tX5"/>
-                                                            <include reference="Tt0-2K-j1w"/>
-                                                        </mask>
-                                                    </variation>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
@@ -118,28 +84,6 @@
                                                 <constraint firstItem="mZZ-my-hTY" firstAttribute="top" secondItem="6vu-CL-24P" secondAttribute="top" id="l8t-5b-SxF"/>
                                                 <constraint firstItem="mZZ-my-hTY" firstAttribute="leading" secondItem="6vu-CL-24P" secondAttribute="leading" constant="6" id="w2c-nl-ugq"/>
                                             </constraints>
-                                            <variation key="default">
-                                                <mask key="subviews">
-                                                    <exclude reference="mZZ-my-hTY"/>
-                                                </mask>
-                                                <mask key="constraints">
-                                                    <exclude reference="1Vz-5F-35w"/>
-                                                    <exclude reference="jYg-RU-7a8"/>
-                                                    <exclude reference="l8t-5b-SxF"/>
-                                                    <exclude reference="w2c-nl-ugq"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="heightClass=regular-widthClass=compact">
-                                                <mask key="subviews">
-                                                    <include reference="mZZ-my-hTY"/>
-                                                </mask>
-                                                <mask key="constraints">
-                                                    <include reference="1Vz-5F-35w"/>
-                                                    <include reference="jYg-RU-7a8"/>
-                                                    <include reference="l8t-5b-SxF"/>
-                                                    <include reference="w2c-nl-ugq"/>
-                                                </mask>
-                                            </variation>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="costLabel" destination="TSA-j8-Mjj" id="GeG-Ra-iGI"/>
@@ -154,7 +98,7 @@
                                 </connections>
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d80-4Q-laV">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="NuJ-aN-beB"/>
                                 </constraints>
@@ -171,16 +115,6 @@
                                         </connections>
                                     </barButtonItem>
                                 </items>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="NuJ-aN-beB"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="NuJ-aN-beB"/>
-                                    </mask>
-                                </variation>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -196,44 +130,6 @@
                             <constraint firstItem="G7n-dg-OOS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="t03-al-SSZ"/>
                             <constraint firstItem="d80-4Q-laV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wzf-3t-A9c"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="wAx-St-Vpr"/>
-                                <exclude reference="G7n-dg-OOS"/>
-                                <exclude reference="d80-4Q-laV"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="WDE-TI-1kz"/>
-                                <exclude reference="mZ0-fX-Vne"/>
-                                <exclude reference="8ot-me-Y2x"/>
-                                <exclude reference="wzf-3t-A9c"/>
-                                <exclude reference="Lir-ip-QJ8"/>
-                                <exclude reference="SDi-mk-hDI"/>
-                                <exclude reference="n48-Sf-Uje"/>
-                                <exclude reference="D5y-Id-uIj"/>
-                                <exclude reference="SQW-Jg-QZy"/>
-                                <exclude reference="t03-al-SSZ"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="wAx-St-Vpr"/>
-                                <include reference="G7n-dg-OOS"/>
-                                <include reference="d80-4Q-laV"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="WDE-TI-1kz"/>
-                                <include reference="mZ0-fX-Vne"/>
-                                <include reference="8ot-me-Y2x"/>
-                                <include reference="wzf-3t-A9c"/>
-                                <include reference="Lir-ip-QJ8"/>
-                                <include reference="SDi-mk-hDI"/>
-                                <include reference="n48-Sf-Uje"/>
-                                <include reference="D5y-Id-uIj"/>
-                                <include reference="SQW-Jg-QZy"/>
-                                <include reference="t03-al-SSZ"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="buildingsTableView" destination="G7n-dg-OOS" id="J84-EP-svt"/>
