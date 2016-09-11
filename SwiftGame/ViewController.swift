@@ -14,6 +14,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   
   var buildInfomations: [BuildInfo] = []
   
+  // MARK: View life cycle
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -90,11 +92,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   }
 
   func onTapBuild(selector :UIButton) {
-    let info = buildInfomations[selector.tag]
+    let buildingIndex = selector.tag
+    let info = buildInfomations[buildingIndex]
     if info.cost <= DataManager.getWood() {
       DataManager.addWood(-info.count)
       info.count += 1
-      buildInfomations[selector.tag] = info
+      buildInfomations[buildingIndex] = info
+      DataManager.saveBuildings(buildInfomations)
 
       refreshData()
       

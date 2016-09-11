@@ -15,7 +15,6 @@ class BuildInfo {
   var cost = 0
   
   init (dict :Dictionary<String, AnyObject>) {
-    print(dict)
     name = dict["name"] as! String
     cost = Int(dict["cost"] as! String)!
     count = Int(dict["count"] as! String)!

@@ -54,8 +54,16 @@ struct DataManager {
     return buildInfomations
   }
   
-  static func saveBuilding(building: Array<AnyObject>) {
-    ud.setObject(building, forKey: "building")
+  static func saveBuildings(buildings: [BuildInfo]) {
+    print(buildings)
+    var saveBuildings: [Dictionary<String, String>] = []
+    for building in buildings {
+      let saveBuild = ["name": building.name,
+                       "cost": String(building.cost),
+                       "count": String(building.count)]
+      saveBuildings.append(saveBuild)
+    }
+    ud.setObject(saveBuildings, forKey: "building")
   }
   
   static func setBuilding(buildInfo: [BuildInfo], id: UInt) {
@@ -63,7 +71,7 @@ struct DataManager {
   }
   
   // TODO Int to Int64
-
+  
   // People
   static func getPeople() -> Int {
     return ud.integerForKey(Status.people)
