@@ -1,0 +1,1 @@
+- [ ] BuildingやBuildをStructureに変更する
