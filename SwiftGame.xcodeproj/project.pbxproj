@@ -96,10 +96,10 @@
 			isa = PBXGroup;
 			children = (
 				20DC0E8F1D85B19500F6F3A5 /* memo.txt */,
+				C49F544A1BD7BE9E00F42D75 /* Products */,
 				C49F544B1BD7BE9E00F42D75 /* SwiftGame */,
 				C49F54601BD7BE9E00F42D75 /* SwiftGameTests */,
 				C49F546B1BD7BE9E00F42D75 /* SwiftGameUITests */,
-				C49F544A1BD7BE9E00F42D75 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,9 +151,9 @@
 		C4DD80211C49F13E00F7BFC4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C44D3E961BEF841E0074B1C3 /* BuildingTableViewCell.swift */,
 				C4FAE1311BE5FCB2001D8053 /* UIImage+ResizeAndCrop.swift */,
 				C4FAE12F1BE5E4E5001D8053 /* UIScrollView+Image.swift */,
-				C44D3E961BEF841E0074B1C3 /* BuildingTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -161,9 +161,9 @@
 		C4DD80221C49F16000F7BFC4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				20DC0E8D1D85A68100F6F3A5 /* BuildInfo.swift */,
 				C44D3E941BEF46F70074B1C3 /* DataManager.swift */,
 				C44D3E981BEFA4AB0074B1C3 /* UICIolor+Hex.swift */,
-				20DC0E8D1D85A68100F6F3A5 /* BuildInfo.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
