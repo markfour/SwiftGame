@@ -57,7 +57,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   func configCell(cell: BuildingTableViewCell, indexPath: NSIndexPath) -> BuildingTableViewCell {
     let info = buildInfomations[indexPath.row]
     
-    cell.titleLabel.text = info.displayName
+    cell.titleLabel.text = info.name
     cell.costLabel.text = String(info.cost)
     cell.countLabel.text = String(info.count)
     cell.buyButton.addTarget(self, action: #selector(ViewController.onTapBuild(_:)), forControlEvents: .TouchUpInside)

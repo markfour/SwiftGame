@@ -8,6 +8,16 @@
 
 import Foundation
 
-class buildInfo {
-    
+class BuildInfo {
+  // TODO 初期化方法をgetに切り替える
+  var name = ""
+  var count = 0
+  var cost = 0
+  
+  init (dict :Dictionary<String, AnyObject>) {
+    print(dict)
+    name = dict["name"] as! String
+    cost = Int(dict["cost"] as! String)!
+    count = Int(dict["count"] as! String)!
+  }
 }
