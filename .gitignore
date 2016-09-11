@@ -4,3 +4,5 @@
 SwiftGame.xcodeproj/project.xcworkspace/xcuserdata/hayashidakazumi.xcuserdatad/UserInterfaceState.xcuserstate
 
 *.DS_Store
+
+*.xcbkptlist
