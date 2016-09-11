@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		20DC0E8E1D85A68100F6F3A5 /* BuildInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC0E8D1D85A68100F6F3A5 /* BuildInfo.swift */; };
+		20DC0E901D85B19500F6F3A5 /* memo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 20DC0E8F1D85B19500F6F3A5 /* memo.txt */; };
 		C44D3E921BEF3B9D0074B1C3 /* BuildingMenu.plist in Resources */ = {isa = PBXBuildFile; fileRef = C44D3E911BEF3B9D0074B1C3 /* BuildingMenu.plist */; };
 		C44D3E951BEF46F70074B1C3 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D3E941BEF46F70074B1C3 /* DataManager.swift */; };
 		C44D3E971BEF841E0074B1C3 /* BuildingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D3E961BEF841E0074B1C3 /* BuildingTableViewCell.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		20DC0E8D1D85A68100F6F3A5 /* BuildInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildInfo.swift; sourceTree = "<group>"; };
+		20DC0E8F1D85B19500F6F3A5 /* memo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = memo.txt; sourceTree = "<group>"; };
 		C44D3E911BEF3B9D0074B1C3 /* BuildingMenu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BuildingMenu.plist; sourceTree = "<group>"; };
 		C44D3E941BEF46F70074B1C3 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		C44D3E961BEF841E0074B1C3 /* BuildingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingTableViewCell.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		C49F54401BD7BE9E00F42D75 = {
 			isa = PBXGroup;
 			children = (
+				20DC0E8F1D85B19500F6F3A5 /* memo.txt */,
 				C49F544B1BD7BE9E00F42D75 /* SwiftGame */,
 				C49F54601BD7BE9E00F42D75 /* SwiftGameTests */,
 				C49F546B1BD7BE9E00F42D75 /* SwiftGameUITests */,
@@ -280,6 +283,7 @@
 				C49F54541BD7BE9E00F42D75 /* Assets.xcassets in Resources */,
 				C44D3E921BEF3B9D0074B1C3 /* BuildingMenu.plist in Resources */,
 				C49F54521BD7BE9E00F42D75 /* Main.storyboard in Resources */,
+				20DC0E901D85B19500F6F3A5 /* memo.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
