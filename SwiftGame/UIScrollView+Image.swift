@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIScrollView {
-  func fixImage(imageView imageView:UIImageView) {
+  func fixImage(imageView:UIImageView) {
     // Fit image
     var resize = frame.size
     
@@ -26,6 +26,6 @@ extension UIScrollView {
     }
     
     imageView.image = imageView.image?.resizeToSize(resize)
-    imageView.backgroundColor = UIColor.blueColor()
+    imageView.backgroundColor = UIColor.blue
   }
 }

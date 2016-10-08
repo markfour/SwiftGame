@@ -16,34 +16,34 @@ struct Status {
 }
 
 struct DataManager {
-  static let ud = NSUserDefaults.standardUserDefaults()
+  static let ud = UserDefaults.standard
   
   static func didInit() -> Bool{
-    if ud.boolForKey("init") {
+    if ud.bool(forKey: "init") {
       return true
     }
     return false
   }
   
   static func saveInit() {
-    ud.setInteger(10, forKey: Status.people)
-    ud.setInteger(10, forKey: Status.food)
-    ud.setInteger(10, forKey: Status.wood)
-    ud.setInteger(10, forKey: Status.stone)
+    ud.set(10, forKey: Status.people)
+    ud.set(10, forKey: Status.food)
+    ud.set(10, forKey: Status.wood)
+    ud.set(10, forKey: Status.stone)
     
-    guard let path = NSBundle.mainBundle().pathForResource("BuildingMenu.plist", ofType:nil) else { return }
+    guard let path = Bundle.main.path(forResource: "BuildingMenu.plist", ofType:nil) else { return }
     guard let building = NSArray(contentsOfFile: path) else { return }
-    ud.setObject(building, forKey: "building")
-    ud.setBool(true, forKey: "init")
+    ud.set(building, forKey: "building")
+    ud.set(true, forKey: "init")
   }
   
   static func getBuilding() -> Array<Dictionary<String, AnyObject>> {
-    let array: Array = ud.objectForKey("building") as! [Dictionary<String, AnyObject>]
+    let array: Array = ud.object(forKey: "building") as! [Dictionary<String, AnyObject>]
     return array
   }
   
   static func getBuildInfo() -> [BuildInfo] {
-    let array: Array = ud.objectForKey("building") as! [Dictionary<String, AnyObject>]
+    let array: Array = ud.object(forKey: "building") as! [Dictionary<String, AnyObject>]
     var buildInfomations: [BuildInfo] = []
     
     for dict:Dictionary<String, AnyObject> in array {
@@ -54,7 +54,7 @@ struct DataManager {
     return buildInfomations
   }
   
-  static func saveBuildings(buildings: [BuildInfo]) {
+  static func saveBuildings(_ buildings: [BuildInfo]) {
     print(buildings)
     var saveBuildings: [Dictionary<String, String>] = []
     for building in buildings {
@@ -63,10 +63,10 @@ struct DataManager {
                        "count": String(building.count)]
       saveBuildings.append(saveBuild)
     }
-    ud.setObject(saveBuildings, forKey: "building")
+    ud.set(saveBuildings, forKey: "building")
   }
   
-  static func setBuilding(buildInfo: [BuildInfo], id: UInt) {
+  static func setBuilding(_ buildInfo: [BuildInfo], id: UInt) {
     
   }
   
@@ -74,61 +74,61 @@ struct DataManager {
   
   // People
   static func getPeople() -> Int {
-    return ud.integerForKey(Status.people)
+    return ud.integer(forKey: Status.people)
   }
   
-  static func setPeople(value: Int) {
-    ud.setInteger(value, forKey: Status.people)
+  static func setPeople(_ value: Int) {
+    ud.set(value, forKey: Status.people)
   }
   
-  static func addPeople(value: Int) {
-    var _value = ud.integerForKey(Status.people)
+  static func addPeople(_ value: Int) {
+    var _value = ud.integer(forKey: Status.people)
     _value += value
-    ud.setInteger(_value, forKey: Status.people)
+    ud.set(_value, forKey: Status.people)
   }
   
   static func getFood() -> Int {
-    return ud.integerForKey(Status.food)
+    return ud.integer(forKey: Status.food)
   }
   
   // Food
-  static func setFood(value: Int) {
-    ud.setInteger(value, forKey: Status.food)
+  static func setFood(_ value: Int) {
+    ud.set(value, forKey: Status.food)
   }
   
-  static func addFood(value: Int) {
-    var _value = ud.integerForKey(Status.food)
+  static func addFood(_ value: Int) {
+    var _value = ud.integer(forKey: Status.food)
     _value += value
-    ud.setInteger(_value, forKey: Status.food)
+    ud.set(_value, forKey: Status.food)
   }
   
   // Wood
   static func getWood() -> Int {
-    return ud.integerForKey(Status.wood)
+    return ud.integer(forKey: Status.wood)
   }
   
-  static func setWood(value: Int) {
-    ud.setInteger(value, forKey: Status.wood)
+  static func setWood(_ value: Int) {
+    ud.set(value, forKey: Status.wood)
   }
   
-  static func addWood(value: Int) {
-    var _value = ud.integerForKey(Status.wood)
+  static func addWood(_ value: Int) {
+    var _value = ud.integer(forKey: Status.wood)
     _value += value
-    ud.setInteger(_value, forKey: Status.wood)
+    ud.set(_value, forKey: Status.wood)
   }
   
   // Stone
   static func getStone() -> Int {
-    return ud.integerForKey(Status.stone)
+    return ud.integer(forKey: Status.stone)
   }
   
-  static func setStone(value: Int) {
-    ud.setInteger(value, forKey: Status.stone)
+  static func setStone(_ value: Int) {
+    ud.set(value, forKey: Status.stone)
   }
   
-  static func addStone(value: Int) {
-    var _value = ud.integerForKey(Status.stone)
+  static func addStone(_ value: Int) {
+    var _value = ud.integer(forKey: Status.stone)
     _value += value
-    ud.setInteger(_value, forKey: Status.stone)
+    ud.set(_value, forKey: Status.stone)
   }
 }

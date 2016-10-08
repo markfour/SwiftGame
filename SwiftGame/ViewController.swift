@@ -20,10 +20,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     super.viewDidLoad()
     
     buildInfomations = DataManager.getBuildInfo()
-    buildingsTableView.registerClass(BuildingTableViewCell.classForCoder(), forCellReuseIdentifier: "Cell")
+    buildingsTableView.register(BuildingTableViewCell.classForCoder(), forCellReuseIdentifier: "Cell")
   }
   
-  override func viewWillAppear(animated: Bool) {
+  override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     
   }
@@ -34,36 +34,36 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   }
   
   // MARK: -
-  func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+  func numberOfSections(in tableView: UITableView) -> Int {
     return 1
   }
   
-  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return buildInfomations.count
   }
   
-  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    var cell: BuildingTableViewCell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! BuildingTableViewCell
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    var cell: BuildingTableViewCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! BuildingTableViewCell
     cell = configCell(cell, indexPath: indexPath)
     return cell
   }
   
-  func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 60
   }
   
-  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    tableView.deselectRowAtIndexPath(indexPath, animated: true)
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.deselectRow(at: indexPath, animated: true)
   }
   
-  func configCell(cell: BuildingTableViewCell, indexPath: NSIndexPath) -> BuildingTableViewCell {
-    let info = buildInfomations[indexPath.row]
+  func configCell(_ cell: BuildingTableViewCell, indexPath: IndexPath) -> BuildingTableViewCell {
+    let info = buildInfomations[(indexPath as NSIndexPath).row]
     
     cell.titleLabel.text = info.name
     cell.costLabel.text = String(info.cost)
     cell.countLabel.text = String(info.count)
-    cell.buyButton.addTarget(self, action: #selector(ViewController.onTapBuild(_:)), forControlEvents: .TouchUpInside)
-    cell.buyButton.tag = indexPath.row
+    cell.buyButton.addTarget(self, action: #selector(ViewController.onTapBuild(_:)), for: .touchUpInside)
+    cell.buyButton.tag = (indexPath as NSIndexPath).row
     cell.setLayout()
     
     return cell
@@ -75,7 +75,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   }
   
   // MARK: button
-  @IBAction func onResetTap(sender: AnyObject) {
+  @IBAction func onResetTap(_ sender: AnyObject) {
     DataManager.saveInit()
     buildInfomations = DataManager.getBuildInfo()
 
@@ -83,7 +83,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     refreshData()
   }
   
-  @IBAction func onNextDayTap(sender: AnyObject) {
+  @IBAction func onNextDayTap(_ sender: AnyObject) {
     DataManager.addPeople(1)
     DataManager.addWood(1)
     DataManager.addStone(1)
@@ -91,7 +91,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     refreshData()
   }
 
-  func onTapBuild(selector :UIButton) {
+  func onTapBuild(_ selector :UIButton) {
     let buildingIndex = selector.tag
     let info = buildInfomations[buildingIndex]
     if info.cost <= DataManager.getWood() {
@@ -102,8 +102,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
       refreshData()
       
-      let indexPath = NSIndexPath(forRow: selector.tag, inSection: 0)
-      buildingsTableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+      let indexPath = IndexPath(row: selector.tag, section: 0)
+      buildingsTableView.reloadRows(at: [indexPath], with: .automatic)
 
     } else {
       // TODO cannot buy
