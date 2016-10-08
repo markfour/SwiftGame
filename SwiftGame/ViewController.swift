@@ -95,7 +95,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     let buildingIndex = selector.tag
     let info = buildInfomations[buildingIndex]
     if info.cost <= DataManager.getWood() {
-      DataManager.addWood(-info.count)
+      DataManager.addWood(-info.cost)
       info.count += 1
       buildInfomations[buildingIndex] = info
       DataManager.saveBuildings(buildInfomations)
