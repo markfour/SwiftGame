@@ -1,1 +1,2 @@
 - [ ] BuildingやBuildをStructureに変更する
+- [ ] 命名がおかしい
