@@ -1,2 +1,4 @@
-- [ ] BuildingやBuildをStructureに変更する
+- [x] BuildingやBuildをStructureに変更する
+  - Bulldingのままで良い
+- [ ] 新しいメインビューにする
 - [ ] 命名がおかしい
