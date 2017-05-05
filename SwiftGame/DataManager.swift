@@ -9,7 +9,7 @@
 import Foundation
 
 struct Status {
-  static let people = "peple"
+  static let people = "people"
   static let food = "food"
   static let wood = "wood"
   static let stone = "stone"
