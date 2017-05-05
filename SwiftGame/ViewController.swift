@@ -78,7 +78,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
   @IBAction func onResetTap(_ sender: AnyObject) {
     DataManager.saveInit()
     buildInfomations = DataManager.getBuildInfo()
-
+    
     buildingsTableView.reloadData()
     refreshData()
   }
@@ -90,7 +90,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     refreshData()
   }
-
+  
   func onTapBuild(_ selector :UIButton) {
     let buildingIndex = selector.tag
     let info = buildInfomations[buildingIndex]
@@ -99,12 +99,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
       info.count += 1
       buildInfomations[buildingIndex] = info
       DataManager.saveBuildings(buildInfomations)
-
+      
       refreshData()
       
       let indexPath = IndexPath(row: selector.tag, section: 0)
       buildingsTableView.reloadRows(at: [indexPath], with: .automatic)
-
+      
     } else {
       // TODO cannot buy
     }
