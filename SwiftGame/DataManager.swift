@@ -55,7 +55,6 @@ struct DataManager {
   }
   
   static func saveBuildings(_ buildings: [BuildInfo]) {
-    print(buildings)
     var saveBuildings: [Dictionary<String, String>] = []
     for building in buildings {
       let saveBuild = ["name": building.name,
