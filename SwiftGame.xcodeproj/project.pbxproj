@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20D9BC341EBC5B4A00478173 /* Resouce.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20D9BC331EBC5B4A00478173 /* Resouce.plist */; };
 		20DC0E8E1D85A68100F6F3A5 /* BuildInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC0E8D1D85A68100F6F3A5 /* BuildInfo.swift */; };
 		20DC0E901D85B19500F6F3A5 /* memo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 20DC0E8F1D85B19500F6F3A5 /* memo.txt */; };
 		C44D3E921BEF3B9D0074B1C3 /* BuildingMenu.plist in Resources */ = {isa = PBXBuildFile; fileRef = C44D3E911BEF3B9D0074B1C3 /* BuildingMenu.plist */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20D9BC331EBC5B4A00478173 /* Resouce.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Resouce.plist; sourceTree = "<group>"; };
 		20DC0E8D1D85A68100F6F3A5 /* BuildInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildInfo.swift; sourceTree = "<group>"; };
 		20DC0E8F1D85B19500F6F3A5 /* memo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = memo.txt; sourceTree = "<group>"; };
 		C44D3E911BEF3B9D0074B1C3 /* BuildingMenu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BuildingMenu.plist; sourceTree = "<group>"; };
@@ -76,6 +78,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20D9BC351EBC5B9C00478173 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C44D3E911BEF3B9D0074B1C3 /* BuildingMenu.plist */,
+				20D9BC331EBC5B4A00478173 /* Resouce.plist */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		C49F54401BD7BE9E00F42D75 = {
 			isa = PBXGroup;
 			children = (
@@ -99,15 +110,15 @@
 		C49F544B1BD7BE9E00F42D75 /* SwiftGame */ = {
 			isa = PBXGroup;
 			children = (
-				C4DD80231C49F16900F7BFC4 /* Controller */,
-				C4DD80221C49F16000F7BFC4 /* Model */,
-				C4DD80211C49F13E00F7BFC4 /* View */,
+				20D9BC351EBC5B9C00478173 /* Data */,
 				C49F544C1BD7BE9E00F42D75 /* AppDelegate.swift */,
 				C49F54531BD7BE9E00F42D75 /* Assets.xcassets */,
-				C44D3E911BEF3B9D0074B1C3 /* BuildingMenu.plist */,
+				C4DD80231C49F16900F7BFC4 /* Controller */,
 				C49F54581BD7BE9E00F42D75 /* Info.plist */,
 				C49F54551BD7BE9E00F42D75 /* LaunchScreen.storyboard */,
 				C49F54501BD7BE9E00F42D75 /* Main.storyboard */,
+				C4DD80221C49F16000F7BFC4 /* Model */,
+				C4DD80211C49F13E00F7BFC4 /* View */,
 			);
 			path = SwiftGame;
 			sourceTree = "<group>";
@@ -246,6 +257,7 @@
 				C44D3E921BEF3B9D0074B1C3 /* BuildingMenu.plist in Resources */,
 				C49F54521BD7BE9E00F42D75 /* Main.storyboard in Resources */,
 				20DC0E901D85B19500F6F3A5 /* memo.txt in Resources */,
+				20D9BC341EBC5B4A00478173 /* Resouce.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
